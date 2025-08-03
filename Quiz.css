@@ -256,6 +256,23 @@ h2 {
   margin-top: 5px;
 }
 
+.tip-box {
+  position: fixed;
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  box-shadow: 0 12px 25px rgb(0 0 0 / 65%);
+  padding: 200px 30px;
+  margin: 15px 0;
+  border-radius: 8px;
+  max-width: 600px;
+  z-index: 1000;
+
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+
 /*-- Images -- */
 
 /* Update question image for better mobile experience */
