@@ -247,11 +247,11 @@ function displayQuiz(){
     });
 
     ////////////////////////////////////////////////////////
-    // Function to display the current question & choices // - copied, not fully checked
+    // Function to display the current question & choices // 
     ////////////////////////////////////////////////////////
 
     function displayCurrentQuestion() {
-        console.log("Displaying question:", currentQuestionIndex);
+        console.log("==== Displaying question:", currentQuestionIndex);
 
         const currentQuestion = questions[currentQuestionIndex];
         const questionElement = document.getElementById('question');
@@ -290,7 +290,7 @@ function displayQuiz(){
 
 
     /////////////////////////////////////
-    // Function to handle choice click // - copied, not fully checked
+    // Function to handle choice click // 
     /////////////////////////////////////
     function handleChoiceClick(choiceIndex) {
         console.log("Choice clicked:", choiceIndex);
@@ -319,10 +319,50 @@ function displayQuiz(){
         //Move to the next question
         currentQuestionIndex++;
 
+        // any tips? 
+        if (currentQuestionIndex === 5){
+            showTip("Quick tip: <br>People who track their spending even casually end up with more freedom for fun stuff!<br><br>* click anywhere to dismiss *");
+        } else if (currentQuestionIndex ===7){
+            showTip("Did you know?<br>70% of people admit they're not ready for big surprises... until it's too late.")
+        } else if (currentQuestionIndex ===9){
+            showTip("Little secret:<br>Most future problems are solved by just being curious enough to ask.")
+        } else if (currentQuestionIndex ===10){
+            showTip("Life satisfaction studies shows:<br> Happiness = 30% planning ahead + 30% relationships + 30% fun... +10% snacks.")
+        } 
+
         if (currentQuestionIndex < questions.length) {
             displayCurrentQuestion();
         } else {showContactPage();}
     }
+
+    ////////////////////////////////////////////////
+    // Function to showTip when after selected Qn //    -- I am here
+    ////////////////////////////////////////////////
+    function showTip(message) {
+        console.log("tip shown:", message)
+        const tipBox = document.getElementById("tip-box"); if (!tipBox) {console.error("tip-box not found in DOM");return;}
+        tipBox.innerHTML = message;
+        tipBox.style.display = "block";
+
+        // Remove any existing click listener, then add a one-time listener to close
+        document.body.removeEventListener("click", hideTipOnce);
+        // Close on click anywhere, with slight delay to avoid instand dismiss on same click
+        setTimeout(() => {
+            document.body.addEventListener("click", hideTipOnce, { once: true });
+        }, 100);
+    }
+
+    function hideTipOnce() {
+        console.log("tip hidden")
+        const tipBox = document.getElementById("tip-box");
+        if (tipBox) {
+            tipBox.style.display = "none";
+            tipBox.innerHTML = "";
+        }
+    }
+    // Make showTip() globally available for debugging //
+    window.showTip = showTip;
+
 
     /////////////////////////////////////////////
     // Show contact page after quiz completion //
@@ -604,3 +644,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Test the popup
+/*
+document.addEventListener("DOMContentLoaded", function() {
+    showTip("This is a test tip. <br>Click anywhere to dismiss.");
+})*/
