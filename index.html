@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <title>Pawventure</title>
+  <link rel="stylesheet" href="Quiz.css">
+
+  <script>
+    if (window.top !== window.self) {
+      window.top.location = window.self.location.href;}
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0BT0S586R"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-W0BT0S586R');
+  </script>
+</head>
+  
+<body>
+  <div class="phone-container">  
+    
+    <!-- HOME PAGE -->
+    <div id="home" class="flex-center flex-column">
+      <h1>Pawventure2</h1>
+      <h2>Paws up! Your Adventure Begins Now!</h2>
+      <h2>
+        Potions, Paws & Personality. Uncover your Life Readiness with a sprinkle of stardust!
+      </h2>
+
+      <div class="begin-quiz-container">
+        <!-- Merger: intro html -->
+        <button id="begin-intro" style="margin-top: 24px">Start!</button>
+      </div>
+    </div>
+
+    <!--INTRODUCTION PAGE  -->
+    <div class="intro-page" id="intro-page" style="display: none;"> 
+      <div id="intro" class="justify-center flex-column"> 
+        <h1>Pawventure</h1>
+        <h2>You're about to enter the Land of Floof!</h2>
+        <h2>
+          A cozy little island where every pet has a purpose, and every hooman
+          is matched to their guardian role.
+        </h2> 
+        <p> 
+          <img src="./images/LandofFloof.gif" class="cover-image" alt="Cover Image"> 
+        </p> 
+        <div class="begin-quiz-container"> 
+          <button id="begin-quiz" style="margin-top: 24px">Let's Paw-ceed!</button> 
+        </div> 
+      </div>   
+    </div>
+    
+    <!-- QUIZ PAGE  -->
+    <div class="quiz-page" id="quiz-page" style="display: none;">
+      <div id="quiz" class="justify-center flex-column">
+        <!-- Quiz progress -->
+          <!-- <img id="question-progress-image" src="" > -->
+          <div id="progress-container">
+            <div id="progress-bar"></div>
+            <!--<div id="progress-text">0%</div>-->
+          </div>
+
+        <!-- Quiz image,qn, choice-->
+        <img id="question-image" src="">
+        <h2 id="question" style="margin-bottom: 8px">Loading question...</h2>
+        <div id="choices" class="choices">  
+          
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONTACT FORM PAGE -->
+    <div id="contact-page" style = "display:none; overflow-y:auto; max-height:100vh; scrollbar-width:none; -ms-overflow-style:none;">
+      <h1>Protect Your Peace of Mind! 🐾</h1>
+      <div style="text-align: center; margin-bottom: 30px">
+        <h2 style="font-size: 16px; margin-bottom: 16px; line-height: 1.4">
+          Hi there! We're a group passionate about spreading awareness of pet
+          insurance in Singapore.
+        </h2>
+        <h2 style="font-size:14px; margin-bottom:16px; line-height:1.4; color:#333;">
+          Many pet parents don't realize how pet insurance can be a 
+          game-changer until it's too late. We believe furry friend 
+          deserves the best care possible!
+        </h2>
+        <h2 style="font-size: 16px; margin-bottom: 20px; font-weight: 600">
+          Would you like to learn more about pet insurance options?
+        </h2>
+      </div>
+      <form id="insurance-form" style="display:flex; flex-direction:column; gap:15px; max-width:100%; margin:0 margin;">
+        <input type="text" id="user-name"
+          placeholder="Your Name" required 
+          style="padding: 12px; 
+            border: 2px solid #ffd989; border-radius: 25px; 
+            font-family: 'Gloria Hallelujah', cursive; font-size: 14px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;">
+        <input type="email" id="user-email"
+          placeholder="Your email" required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Please enter a valid email address"
+          style="padding: 12px;
+            border: 2px solid #ffd989; border-radius: 25px;
+            font-family: 'Gloria Hallelujah', cursive; font-size: 14px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;">
+        <div style="position: relative; width: 100%">
+          <span style="position: absolute; left:15px; top:50%;
+            transform: translateY(-50%);
+            font-family: 'Gloria Hallelujah', cursive;
+            font-size: 14px;
+            color: #3b2921;
+            z-index: 2;">+65</span>
+          <input type="tel" id="user-phone"
+            placeholder="8123 4567"
+            pattern="[0-9]{8}"
+            title="Please enter a valid 8-digit Singapore phone number"
+            maxlength="8"
+            style="padding: 12px 45px 12px 45px;
+              border: 2px solid #ffd989; border-radius: 25px;
+              font-family: 'Gloria Hallelujah', cursive; font-size: 14px;
+              text-align: center;
+              width: 100%;
+              box-sizing: border-box;"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+        </div>
+        <select id="pet-type" required
+          style=" padding: 12px;
+            border: 2px solid #ffd989; border-radius: 25px;
+            font-family: 'Gloria Hallelujah', cursive; font-size: 14px;
+            text-align: center; 
+            background-color: white;
+            width: 100%; 
+            box-sizing: border-box;"> 
+          <option value ="" disabled selected hidden> what pet do you have? </option>
+          <option value="Dog">Dog</option>
+          <option value="Cat">Cat</option>
+          <option value="Planning">Planning to get one</option>
+        </select>
+        <button type="submit" id="submit-contact"
+          style="padding: 12px;
+            background-color: #ffd989;
+            border: 2px solid #ffd989; border-radius: 25px;
+            font-family: 'Gloria Hallelujah', cursive; font-size: 14px; font-weight: 600;
+            color: #3b2921;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;">Yes, Get Insurance Info!</button>
+      </form>
+      <div id="form-message" style="margin-top: 15px; font-size: 14px"></div>
+      
+      <!-- Skip Option -->
+      <div style="text-align: center; margin-top: 25px">
+        <span id="skip-to-results"
+          style="font-family: 'Gloria Hallelujah', cursive; font-size: 14px;
+            color: #666;
+            cursor: pointer;
+            text-decoration: underline;"
+          onclick="calculateAndDisplayResult()">Skip → See My Results</span>
+      </div>
+    </div>
+
+    <!-- RESULT PAGE -->
+    <div id="result-page" style="display: none;
+        overflow-y: auto;
+        max-height: 100vh;
+        scrollbar-width: none; -ms-overflow-style: none;">
+      <h1>Your Result!</h1>
+      <div id="result-content">
+        <div id="result-image"> </div>  
+        <h2 id="result-type"></h2>
+        <div id="result-description"></div>
+      </div> 
+
+      <div class="begin-quiz-container" style="margin-top: 30px">
+        <button class="share-button">Share Your Result! 🐾</button>
+        <button id="back-to-home" 
+          onclick="window.location.href='index.html'">Try Again</button>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Load script.js on the quiz page -->
+   <script>
+    // Auto-start the quiz when the page loads
+    document.addEventListener("DOMContentLoaded", function () {
+      console.log("Quiz page loaded, starting quiz...");  // Start displaying the first question immediately
+    });
+   </script>
+  <script src="script.js"></script>
+</body>
+  
+</html>
