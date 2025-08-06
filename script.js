@@ -327,7 +327,7 @@ function displayQuiz(){
         } else if (currentQuestionIndex ===9){
             showTip("Little secret:<br>Most future problems are solved by just being curious enough to ask.")
         } else if (currentQuestionIndex ===10){
-            showTip("Life satisfaction studies shows:<br> Happiness = 30% planning ahead + 30% relationships + 30% fun... +10% snacks.")
+            showTip("Life satisfaction studies shows:<br> Happiness = 30% planning ahead + 30% relationships + 30% fun... + 10% snacks.")
         } 
 
         if (currentQuestionIndex < questions.length) {
@@ -649,3 +649,4 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
