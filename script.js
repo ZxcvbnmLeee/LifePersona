@@ -323,7 +323,7 @@ function displayQuiz(){
         if (currentQuestionIndex === 5){
             showTip("Quick tip: <br>People who track their spending even casually end up with more freedom for fun stuff!<br><br>* click anywhere to dismiss *");
         } else if (currentQuestionIndex ===7){
-            showTip("Did you know?<br>70% of people admit they're not ready for big surprises... until it's too late.")
+            showTip("Did you know?<br>70% of people admit they're not ready for big surprises...<br>until it's too late.")
         } else if (currentQuestionIndex ===9){
             showTip("Little secret:<br>Most future problems are solved by just being curious enough to ask.")
         } else if (currentQuestionIndex ===10){
@@ -649,4 +649,5 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
