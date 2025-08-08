@@ -179,16 +179,16 @@ function displayQuiz(){
     ////////////////////////////
     function displayQuestionImage(questionIndex){
         const imageURLs = [
-            "./images/1.png",
-            "./images/2.png",
-            "./images/3.png",
-            "./images/4.png",
-            "./images/5.png",
-            "./images/6.png",
-            "./images/7.png",
-            "./images/8.png",
-            "./images/9.png",
-            "./images/10_end.png",];
+            "./images/1_planner.png",
+            "./images/2_security.png",
+            "./images/3_life.png",
+            "./images/4_magic.png",
+            "./images/5_spending.png",
+            "./images/6_advice.png",
+            "./images/7_storm.png",
+            "./images/8_emergency.png",
+            "./images/9_future.png",
+            "./images/10_happiness.png",];
         const questionImageElement = document.getElementById('question-image');
         if (questionImageElement) {questionImageElement.src = imageURLs[questionIndex];}
     }
@@ -327,7 +327,7 @@ function displayQuiz(){
         } else if (currentQuestionIndex ===9){
             showTip("Little secret:<br>Most future problems are solved by just being curious enough to ask.")
         } else if (currentQuestionIndex ===10){
-            showTip("Life satisfaction studies shows:<br> Happiness = 30% planning ahead + 30% relationships + 30% fun... + 10% snacks.")
+            showTip("Life satisfaction studies shows:<br>Happiness = 30% planning ahead + 30% relationships + 30% fun... + 10% snacks.")
         } 
 
         if (currentQuestionIndex < questions.length) {
@@ -399,40 +399,36 @@ function displayQuiz(){
         // Scoring system //
 
         if (protectionScore >= 10 && experienceScore >= 5 && mindsetScore >= 6) {
-            resultImage = "R1.png"; // Prepared Pawrent
-            resultType = "Prepared Pawrent";
+            resultImage = "R1.png"; 
+            resultType = "Captain Backup";
         }
         else if (experienceScore <= 4 && mindsetScore >= 6 && contactScore >= 1) {
-            resultImage = "R2.png"; // Curious Newbie
-            resultType = "Curious Newbie";
+            resultImage = "R2.png"; 
+            resultType = "The Why-Not Wanderer";
         }
-        else if (budgetScore <= 5 && experienceScore >= 5) {
-            resultImage = "R3.png"; // Spoil-Me Specialist
-            resultType = "Spoil-Me Specialist";
+        else if (budgetScore <= 5 && experienceScore >= 5 && mindsetScore <= 10) {
+            resultImage = "R3.png"; 
+            resultType = "The Chill Pill";
         }
         else if (mindsetScore >= 8 && protectionScore <= 6) {
-            resultImage = "R4.png"; // Zen Guardian
-            resultType = "Zen Guardian";
+            resultImage = "R4.png"; 
+            resultType = "The Fun Nomad";
         }
         else if (mindsetScore >= 7 && (experienceScore>=6 || protectionScore >=6)) {
-            resultImage = "R5.png"; // Analyzer
-            resultType = "Analyzer";
+            resultImage = "R5.png"; 
+            resultType = "Detective Data";
         }
         else if (protectionScore >= 6 && experienceScore >= 5 && mindsetScore >= 6) {
-            resultImage = "R6.png"; // Legacy Protector
-            resultType = "Legacy Protector";
+            resultImage = "R6.png"; 
+            resultType = "The Life Strategist";
         }
         else if (budgetScore >= 6 && (contactScore <= 1 || protectionScore <= 5) ) {
-            resultImage = "R7.png"; // Budget Boss
-            resultType = "Budget Boss";
-        }
-        else if (experienceScore >= 5 && contactScore >= 6) {
-            resultImage = "R8.png"; // Memory Maker
-            resultType = "Memory Maker";
+            resultImage = "R7.png"; 
+            resultType = "Wallet Whisperer";
         }
         else {
-            resultImage = "R9.png"; // Bubble Closeter (fallback)
-            resultType = "Bubble Closeter";
+            resultImage = "R8.png"; 
+            resultType = "The Connection Curator";
         }
 
         // Send quiz results to Google Sheets (for skipped contact form)
@@ -579,7 +575,7 @@ function displayQuiz(){
 
                 // Show success message
                 messageDiv.innerHTML =
-                "Thank you! We'll contact you soon about pet insurance! 🎉";
+                "Thank you! We'll contact you soon! 🎉";
                 messageDiv.className = "success";
 
                 // Wait 2 seconds then show results
@@ -649,5 +645,3 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
-
-
