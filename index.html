@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-  <title>Pawventure</title>
+  <title>AnimePersona</title>
   <link rel="stylesheet" href="Quiz.css">
 
   <script>
@@ -33,32 +33,32 @@
     
     <!-- HOME PAGE -->
     <div id="home" class="flex-center flex-column">
-      <h1>Pawventure2</h1>
-      <h2>Paws up! Your Adventure Begins Now!</h2>
+      <h1>AnimePersona</h1>
+      <h2>✨ Your Story Arc Starts Here! ✨</h2>
       <h2>
-        Potions, Paws & Personality. Uncover your Life Readiness with a sprinkle of stardust!
+        From budget battles to dream quests. Uncover your true Anime Persona and see the hero within!
       </h2>
 
       <div class="begin-quiz-container">
         <!-- Merger: intro html -->
-        <button id="begin-intro" style="margin-top: 24px">Start!</button>
+        <button id="begin-intro" style="margin-top: 24px">Start Journey!</button>
       </div>
     </div>
 
     <!--INTRODUCTION PAGE  -->
     <div class="intro-page" id="intro-page" style="display: none;"> 
       <div id="intro" class="justify-center flex-column"> 
-        <h1>Pawventure</h1>
-        <h2>You're about to enter the Land of Floof!</h2>
+        <h1>AnimePersona</h1>
+        <h2>Welcome to the World of Persona Realms!</h2>
         <h2>
-          A cozy little island where every pet has a purpose, and every hooman
-          is matched to their guardian role.
+          A universe where every choice shapes your destiny, and 
+          every hero has their own style of conquering life’s plot twists.
         </h2> 
         <p> 
-          <img src="./images/LandofFloof.gif" class="cover-image" alt="Cover Image"> 
+          <img src="./images/introduction.png" class="cover-image" alt="Cover Image"> 
         </p> 
         <div class="begin-quiz-container"> 
-          <button id="begin-quiz" style="margin-top: 24px">Let's Paw-ceed!</button> 
+          <button id="begin-quiz" style="margin-top: 24px">Let’s Power Up!</button> 
         </div> 
       </div>   
     </div>
@@ -86,19 +86,18 @@
 
     <!-- CONTACT FORM PAGE -->
     <div id="contact-page" style = "display:none; overflow-y:auto; max-height:100vh; scrollbar-width:none; -ms-overflow-style:none;">
-      <h1>Protect Your Peace of Mind! 🐾</h1>
+      <h1>Protect Your Peace of Mind! </h1>
       <div style="text-align: center; margin-bottom: 30px">
         <h2 style="font-size: 16px; margin-bottom: 16px; line-height: 1.4">
-          Hi there! We're a group passionate about spreading awareness of pet
-          insurance in Singapore.
+          Hi there! We're a group of financial professionals passionate about spreading awareness of financial planning in Singapore.
         </h2>
         <h2 style="font-size:14px; margin-bottom:16px; line-height:1.4; color:#333;">
-          Many pet parents don't realize how pet insurance can be a 
-          game-changer until it's too late. We believe furry friend 
-          deserves the best care possible!
+          Many people don’t realize how understanding their unique money style 
+          can transform their life’s journey until they hit a plot twist. 
+          We believe financial literacy shouldn’t be too complex or intimidating for anyone!
         </h2>
         <h2 style="font-size: 16px; margin-bottom: 20px; font-weight: 600">
-          Would you like to learn more about pet insurance options?
+          Would you like to equip yourself with more financial knowledge and confidence?
         </h2>
       </div>
       <form id="insurance-form" style="display:flex; flex-direction:column; gap:15px; max-width:100%; margin:0 margin;">
@@ -148,10 +147,11 @@
             background-color: white;
             width: 100%; 
             box-sizing: border-box;"> 
-          <option value ="" disabled selected hidden> what pet do you have? </option>
-          <option value="Dog">Dog</option>
-          <option value="Cat">Cat</option>
-          <option value="Planning">Planning to get one</option>
+          <option value ="" disabled selected hidden> interest </option>
+          <option value="Literacy">I want to gain more financial literacy</option>
+          <option value="Insurance">I want to get insurance advice</option>
+          <option value="Wealth">I want to learn more about investment strategies</option>
+          <option value="Enquiry">I have other financial concerns I would like to consult</option>
         </select>
         <button type="submit" id="submit-contact"
           style="padding: 12px;
@@ -161,7 +161,7 @@
             color: #3b2921;
             cursor: pointer;
             width: 100%;
-            box-sizing: border-box;">Yes, Get Insurance Info!</button>
+            box-sizing: border-box;">Yes, please reach out!</button>
       </form>
       <div id="form-message" style="margin-top: 15px; font-size: 14px"></div>
       
@@ -189,7 +189,7 @@
       </div> 
 
       <div class="begin-quiz-container" style="margin-top: 30px">
-        <button class="share-button">Share Your Result! 🐾</button>
+        <button class="share-button">Share Your Result!</button>
         <button id="back-to-home" 
           onclick="window.location.href='index.html'">Try Again</button>
       </div>
@@ -209,3 +209,4 @@
 </body>
   
 </html>
+

@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-image: url("./images/frontpage.png");
+  background-image: url("./images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -310,7 +310,7 @@ h2 {
 
 /* Special background for quiz pages only */
 body.quiz-background {
-  background-image: url("./images/frontpage.png");
+  background-image: url("./images/background.png");
 }
 
 /*==============*/
@@ -443,4 +443,3 @@ body.quiz-background {
     padding: 10px;
   }
 }
-
