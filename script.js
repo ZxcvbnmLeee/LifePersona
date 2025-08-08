@@ -620,8 +620,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (shareButton) {
         shareButton.addEventListener("click", function () {
             const shareData = {
-                title: "Pawventure Quiz",
-                text: "I just found out what kind of pet guardian I am! 🐾 Try it too!",
+                title: "AnimePersona",
+                text: "I just found out my Anime Persona! 🌟 Try it too!",
                 url: window.location.href,
             };
 
@@ -633,7 +633,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 // Fallback: copy link to clipboard
                 navigator.clipboard.writeText(window.location.href).then(() => {
-                    alert("Link copied to clipboard! Share it with your friends 🐶🐱");
+                    alert("Link copied to clipboard! Share it with your friends 🎉");
                 }); 
             }
         });
