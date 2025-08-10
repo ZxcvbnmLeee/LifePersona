@@ -153,7 +153,7 @@ h2 {
 .choices {
   display: flex;
   flex-direction: column;
-  align-items: center; justify-content: center; /* or flex-start*/ 
+  align-items: center; justify-content: flex-start; /* or center */ 
   width: 100%;
   gap: 1rem;
   flex-grow: 1; /* Allow it to grow */
@@ -301,7 +301,7 @@ h2 {
   height: auto;       /* maintain aspect ratio */
 }
 
-#result-image { /*Error: too big, now follow cover image first*/
+#result-image, .result-image { 
   display: block;
   height: auto; 
   max-width: 200px;
