@@ -19,7 +19,7 @@ function displayQuiz(){
                 "Make a backup plan on the spot",
                 "Call someone I trust",
                 "Go with the flow",
-                "Panid for 2 mins, then decide"],
+                "Panick for 2 mins, then decide"],
             weights: [
                 {protectionScore: +2, mindsetScore: +2 }, // Weight for 1st choice
                 {protectionScore: +1, experienceScore: +1, mindsetScore: +1 }, // Weight for 2nd choice
@@ -136,7 +136,7 @@ function displayQuiz(){
         {
             question: "A wise parrot says: 'I can give you tips for a smoother future!' You... ",
             choices: [
-                "Say 'Yes! Tell me more!",
+                "Say 'Yes! Tell me more!'",
                 "Ask 'What's in it for me?'",
                 "Smile and say no",
                 "Only if it's short and fun"],
@@ -436,7 +436,7 @@ function displayQuiz(){
 
         // Display image & type into result section
         const resultImageDiv = document.getElementById("result-image");
-        if (resultImageDiv) {resultImageDiv.innerHTML = `<img src="./images/${resultImage}" class="cover-image" alt="Your Persona Result">`;}
+        if (resultImageDiv) {resultImageDiv.innerHTML = `<img src="./images/${resultImage}" class="result-image" alt="Your Persona Result">`;}
         const resultTypeDiv = document.getElementById("result-type");
         if (resultTypeDiv){resultTypeDiv.textContent = resultType;}
 
