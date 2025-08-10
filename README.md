@@ -2,7 +2,7 @@
 
 **"Discover the anime character within you!"**  
 Anime Persona is a fun and lighthearted personality quiz that matches you with your anime-inspired character that best matches your vibe.
-It's for anime fans and anyone curious to see which persona defines their life's story arc!
+It's for anyone curious to see which persona defines their life's story arc!
 
 ---
 
