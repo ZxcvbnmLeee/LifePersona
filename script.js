@@ -14,12 +14,12 @@ function displayQuiz(){
     const questions = [
         // QUESTION 1 //
         {
-            question: "If your plans suddenly change, what's your first move?",
+            question: "You've been planning a project for months, but an unexpected change forces you to alter your plan. What will you do next?",
             choices: [
                 "Make a backup plan on the spot",
                 "Call someone I trust",
                 "Go with the flow",
-                "Panick for 2 mins, then decide"],
+                "Panic for 2 mins, then decide"],
             weights: [
                 {protectionScore: +2, mindsetScore: +2 }, // Weight for 1st choice
                 {protectionScore: +1, experienceScore: +1, mindsetScore: +1 }, // Weight for 2nd choice
@@ -645,4 +645,5 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
