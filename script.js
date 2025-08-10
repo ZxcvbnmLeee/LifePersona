@@ -134,7 +134,7 @@ function displayQuiz(){
         },
         // QUESTION 9 //
         {
-            question: "A wise parrot says: 'I can give you tips for a smoother future!' You... ",
+            question: "A wise merlion says: 'I can give you tips for a smoother future!' You... ",
             choices: [
                 "Say 'Yes! Tell me more!'",
                 "Ask 'What's in it for me?'",
@@ -645,3 +645,4 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
