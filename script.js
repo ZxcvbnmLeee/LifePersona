@@ -31,10 +31,10 @@ function displayQuiz(){
         {
             question: "Which one feels most like 'security' to you?",
             choices: [
-                "A big fat savings account.",
-                "Friends who pick me up (and feed me).",
-                "A life plan that looks like IKEA instructions.",
-                "The ability to eat carbs without guilt."],
+                "A big fat savings account",
+                "Friends who pick me up (and feed me)",
+                "A life plan that looks like IKEA instructions",
+                "The ability to eat carbs without guilt"],
             weights: [
                 {protectionScore: +2, budgetScore: +2 },    // Weight for 1st choice
                 {experienceScore: +1, contactScore: +1 },   // Weight for 2nd choice
@@ -48,7 +48,7 @@ function displayQuiz(){
             choices: [
                 "Open 47 browser tabs (Google is my friend)",
                 "Mum... you free?",
-                "Eh, I'll freestyle it.",
+                "Eh, I'll freestyle it",
                 "Pretend nothing happened"],
             weights: [
                 {protectionScore: +1, budgetScore: +1, experienceScore: +1, mindsetScore:+2 }, // Weight for 1st choice
@@ -137,7 +137,7 @@ function displayQuiz(){
             question: "A wise merlion says: 'I can give you tips for a smoother future!' You... ",
             choices: [
                 "Say 'Yes! Tell me more!'",
-                "Ask 'What's in it for me?'",
+                "Ask 'What's the catch?'",
                 "Smile and say no",
                 "Only if it's short and fun"],
             weights: [
@@ -645,5 +645,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
