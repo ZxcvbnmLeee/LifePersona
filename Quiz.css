@@ -186,7 +186,7 @@ h2 {
 }
 
 /* -- back to home button -- */
-#back-to-home,.share-button {
+#back-to-home,.share-button, #contact-page-btn {
   font-size: 1.4rem;
   font-weight: 600;
   padding: 12px;
@@ -210,7 +210,7 @@ h2 {
     background-color:#FFD989;
 }
 
-#back-to-home:hover,.share-button:hover {
+#back-to-home:hover,.share-button:hover, #contact-page-btn:hover {
     background-color:#FFCD64;
     border-color: #FFCD64;
     color: #fbfbfb;
