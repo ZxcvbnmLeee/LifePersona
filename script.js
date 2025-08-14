@@ -360,6 +360,7 @@ function displayQuiz(){
             tipBox.innerHTML = "";
         }
     }
+
     // Make showTip() globally available for debugging //
     window.showTip = showTip;
 
@@ -372,15 +373,19 @@ function displayQuiz(){
         console.log("Quiz completed! Showing contact page...");
         // calculate result type & image for later use // --- didnt use
 
-        // Hide quiz page, show contact page
+        // Hide quiz page, show contact page & hide result page
         const quizPage = document.getElementById("quiz-page");
         const contactPage = document.getElementById("contact-page");
+        const resultPage = document.getElementById("result-page");
+        if (resultPage) resultPage.style.display = "none";
         if (quizPage) quizPage.style.display = "none";
         if (contactPage) contactPage.style.display = "block";
 
         // Set up form submission handler
         setupContactForm();
     }
+    // Make showContactPage() globally available for return to contact page //
+    window.showContactPage = showContactPage;
 
     ////////////////////////////////////////////
     // Function to calculate & display result // 
@@ -406,7 +411,7 @@ function displayQuiz(){
             resultImage = "R2.png"; 
             resultType = "The Why-Not Wanderer";
         }
-        else if (budgetScore <= 5 && experienceScore >= 5 && mindsetScore <= 10) {
+        else if (budgetScore <= 5 && experienceScore >= 5 && mindsetScore <= 6) {
             resultImage = "R3.png"; 
             resultType = "The Chill Pill";
         }
@@ -645,6 +650,5 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
-
 
 
