@@ -18,7 +18,7 @@ function displayQuiz(){
             choices: [
                 "Make a backup plan on the spot",
                 "Call someone I trust",
-                "Go with the flow",
+                "Take a deep breath and go with the flow",
                 "Panic for 2 mins, then decide"],
             weights: [
                 {protectionScore: +2, mindsetScore: +2 }, // Weight for 1st choice
@@ -31,9 +31,9 @@ function displayQuiz(){
         {
             question: "Which one feels most like 'security' to you?",
             choices: [
-                "A big fat savings account",
-                "Friends who pick me up (and feed me)",
-                "A life plan that looks like IKEA instructions",
+                "Watching my savings account grow like a happy plant",
+                "Knowing I have friends who’ll pick me up when I’m down",
+                "Having a life map so detailed, even GPS jealous",
                 "The ability to eat carbs without guilt"],
             weights: [
                 {protectionScore: +2, budgetScore: +2 },    // Weight for 1st choice
@@ -63,7 +63,7 @@ function displayQuiz(){
             choices: [
                 "100% healthy forever",
                 "Infinite money (bye adulting)",
-                "Calm mode unlocked",
+                "Calm mode unlocked (nothing can shake me)",
                 "Extra time to enjoy life"],
             weights: [
                 {protectionScore: +2, mindsetScore: +1 }, // Weight for 1st choice
@@ -78,8 +78,8 @@ function displayQuiz(){
             choices: [
                 "Only what's necessary",
                 "Balanced spender (snacks + savings)",
-                "Big spender on experiences",
-                "I close my eyes and hope for the best"],
+                "Splurge on fun, memories, and the occasional fancy restaurants",
+                "Tap my card and hope the bank app behaves"],
             weights: [
                 {budgetScore: +2 }, // Weight for 1st choice
                 {budgetScore: +1, experienceScore: +1 }, // Weight for 2nd choice
@@ -91,9 +91,9 @@ function displayQuiz(){
         {
             question: "Whose advice do you trust most?",
             choices: [
-                "A famous person on a TED Talk",
+                "That inspiring TED Talk I bookmarked months ago",
                 "Family and friends",
-                "Someone who shows clear proof",
+                "People who bring receipts, charts, and solid proof",
                 "I trust my own gut"],
             weights: [
                 {experienceScore: +1, mindsetScore: +2},    // Weight for 1st choice
@@ -108,7 +108,7 @@ function displayQuiz(){
             choices: [
                 "Stock up & prepare like a survival drama hero",
                 "Watch the news and wait",
-                "Just stay home and chill",
+                "Just stay home till it passes",
                 "Hope the storm skips my area"],
             weights: [
                 {protectionScore: +2, mindsetScore: +2 }, // Weight for 1st choice
@@ -121,10 +121,10 @@ function displayQuiz(){
         {
             question: "You have to grab one thing in an emergency. Which do you choose?",
             choices: [
-                "Important documents",
-                "My emergency snack bag",
-                "My favourite keepsake (My lucky souvenir)",
-                "My phone/photos"],
+                "My important documents",
+                "A snack stash worthy of surviving MRT breakdowns",
+                "The sentimental item that makes me go “aiya, cannot leave this behind”",
+                "My phone/photos (because memories are in there)"],
             weights: [
                 {protectionScore: +2 }, // Weight for 1st choice
                 {experienceScore: +1 }, // Weight for 2nd choice
@@ -138,7 +138,7 @@ function displayQuiz(){
             choices: [
                 "Say 'Yes! Tell me more!'",
                 "Ask 'What's the catch?'",
-                "Smile and say no",
+                "Politely decline with a smile",
                 "Only if it's short and fun"],
             weights: [
                 {contactScore: +3, mindsetScore: +2}, // Weight for 1st choice
@@ -154,7 +154,7 @@ function displayQuiz(){
                 "Knowing I’ve planned for chaos",
                 "Trying something new",
                 "Time with people I care about",
-                "Treating myself (Buying dessert with no regrets)"],
+                "Rewarding myself (Buying dessert with no regrets)"],
             weights: [
                 {protectionScore: +2, mindsetScore: +2 },   // Weight for 1st choice
                 {experienceScore: +2, mindsetScore: +1 },   // Weight for 2nd choice
@@ -650,5 +650,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
