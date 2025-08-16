@@ -498,7 +498,7 @@ function displayQuiz(){
                 const name = document.getElementById("user-name").value;
                 const email = document.getElementById("user-email").value;
                 const phone = document.getElementById("user-phone").value;
-                const petType = document.getElementById("pet-type").value;
+                const interestType = document.getElementById("interest-type").value;
 
                 // Show loading message
                 messageDiv.innerHTML = "Sending your information... 🐾";
@@ -527,7 +527,7 @@ function displayQuiz(){
                 name: name,
                 email: email,
                 phone: phone,
-                petType: petType,
+                interestType: interestType,
                 resultType: resultType,
                 captainbackup1:     captainbackup1,
                 whynotwanderer2:    whynotwanderer2,
