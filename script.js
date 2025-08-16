@@ -18,28 +18,28 @@ function displayQuiz(){
             choices: [
                 "Make a backup plan on the spot",
                 "Call someone I trust",
-                "Take a deep breath and go with the flow",
+                "Go with the flow",
                 "Panic for 2 mins, then decide"],
             weights: [
-                {protectionScore: +2, mindsetScore: +2 }, // Weight for 1st choice
-                {protectionScore: +1, experienceScore: +1, mindsetScore: +1 }, // Weight for 2nd choice
-                {experienceScore: +2},  // Weight for 3rd choice
-                {mindsetScore: +1 },    // Weight for 4th choice
+                {captainbackup1: +1, detectivedata5: +1 }, // Weight for 1st choice
+                {connectioncurator8: +1, whynotwanderer2: +1 }, // Weight for 2nd choice
+                {whynotwanderer2: +1, ultimatechillpill3: +1},  // Weight for 3rd choice
+                {thefunnomad4: +1, lifestrategist6: +1},    // Weight for 4th choice
                 ]
         },
         // QUESTION 2 //
         {
             question: "Which one feels most like 'security' to you?",
             choices: [
-                "Watching my savings account grow like a happy plant",
-                "Knowing I have friends who’ll pick me up when I’m down",
-                "Having a life map so detailed, even GPS jealous",
+                "A big fat savings account",
+                "Friends who pick me up (and feed me)",
+                "A life plan that looks like IKEA instructions",
                 "The ability to eat carbs without guilt"],
             weights: [
-                {protectionScore: +2, budgetScore: +2 },    // Weight for 1st choice
-                {experienceScore: +1, contactScore: +1 },   // Weight for 2nd choice
-                {protectionScore: +2, mindsetScore: +2 },   // Weight for 3rd choice
-                {mindsetScore: +1 },                        // Weight for 4th choice
+                {captainbackup1: +1, walletwhisperer7: +1},    // Weight for 1st choice
+                {connectioncurator8: +1, ultimatechillpill3: +1 },   // Weight for 2nd choice
+                {lifestrategist6: +1, detectivedata5: +1 },   // Weight for 3rd choice
+                {thefunnomad4: +1, whynotwanderer2: +1},  // Weight for 4th choice
                 ]
         },
         // QUESTION 3 //
@@ -51,10 +51,10 @@ function displayQuiz(){
                 "Eh, I'll freestyle it",
                 "Pretend nothing happened"],
             weights: [
-                {protectionScore: +1, budgetScore: +1, experienceScore: +1, mindsetScore:+2 }, // Weight for 1st choice
-                {mindsetScore: +1, contactScore: +2 },      // Weight for 2nd choice
-                {experienceScore: +1, contactScore: +1 },   // Weight for 3rd choice
-                { }, // Weight for 4th choice
+                { captainbackup1: +1, detectivedata5: +1 }, // Weight for 1st choice
+                { connectioncurator8: +1, ultimatechillpill3: +1 }, // Weight for 2nd choice
+                { whynotwanderer2: +1, thefunnomad4: +1}, // Weight for 3rd choice
+                { ultimatechillpill3: +1, walletwhisperer7: +1 }, // Weight for 4th choice
                 ]
         },
         // QUESTION 4 //
@@ -63,13 +63,13 @@ function displayQuiz(){
             choices: [
                 "100% healthy forever",
                 "Infinite money (bye adulting)",
-                "Calm mode unlocked (nothing can shake me)",
+                "Calm mode unlocked",
                 "Extra time to enjoy life"],
             weights: [
-                {protectionScore: +2, mindsetScore: +1 }, // Weight for 1st choice
-                {budgetScore: +2 }, // Weight for 2nd choice
-                {mindsetScore: +2 }, // Weight for 3rd choice
-                {experienceScore: +1, mindsetScore: +1 }, // Weight for 4th choice
+                { captainbackup1: +1, lifestrategist6: +1 }, // Weight for 1st choice
+                { thefunnomad4: +1, walletwhisperer7: +1 }, // Weight for 2nd choice
+                { ultimatechillpill3: +1, connectioncurator8: +1 }, // Weight for 3rd choice
+                { thefunnomad4: +1, whynotwanderer2: +1}, // Weight for 4th choice
                 ]
         },
         // QUESTION 5 //
@@ -78,28 +78,28 @@ function displayQuiz(){
             choices: [
                 "Only what's necessary",
                 "Balanced spender (snacks + savings)",
-                "Splurge on fun, memories, and the occasional fancy restaurants",
-                "Tap my card and hope the bank app behaves"],
+                "Big spender on experiences",
+                "I close my eyes and hope for the best"],
             weights: [
-                {budgetScore: +2 }, // Weight for 1st choice
-                {budgetScore: +1, experienceScore: +1 }, // Weight for 2nd choice
-                {experienceScore: +2 }, // Weight for 3rd choice
-                {  },                   // Weight for 4th choice
+                { captainbackup1: +1, walletwhisperer7: +1 }, // Weight for 1st choice
+                { lifestrategist6: +1, ultimatechillpill3: +1 }, // Weight for 2nd choice
+                { whynotwanderer2: +1, thefunnomad4: +1 }, // Weight for 3rd choice
+                { thefunnomad4: +1, connectioncurator8: +1 }, // Weight for 4th choice
                 ]
         },
         // QUESTION 6 // (show tip bubble)
         {
             question: "Whose advice do you trust most?",
             choices: [
-                "That inspiring TED Talk I bookmarked months ago",
+                "A famous person on a TED Talk",
                 "Family and friends",
-                "People who bring receipts, charts, and solid proof",
+                "Someone who shows clear proof",
                 "I trust my own gut"],
             weights: [
-                {experienceScore: +1, mindsetScore: +2},    // Weight for 1st choice
-                {mindsetScore: +1, contactScore: +2 },      // Weight for 2nd choice
-                {protectionScore: +1, mindsetScore: +2 },   // Weight for 3rd choice
-                {experienceScore: +2, mindsetScore: +1 },   // Weight for 4th choice
+                {detectivedata5: +1, whynotwanderer2: +1 }, // Weight for 1st choice
+                {connectioncurator8: +1, ultimatechillpill3: +1 }, // Weight for 2nd choice
+                {lifestrategist6: +1, captainbackup1: +1 }, // Weight for 3rd choice
+                {thefunnomad4: +1, walletwhisperer7: +1 }, // Weight for 4th choice
                 ]
         },
         // QUESTION 7 //
@@ -108,28 +108,28 @@ function displayQuiz(){
             choices: [
                 "Stock up & prepare like a survival drama hero",
                 "Watch the news and wait",
-                "Just stay home till it passes",
+                "Just stay home and chill",
                 "Hope the storm skips my area"],
             weights: [
-                {protectionScore: +2, mindsetScore: +2 }, // Weight for 1st choice
-                {protectionScore: +1, mindsetScore: +1 }, // Weight for 2nd choice
-                {experienceScore: +1, mindsetScore: +2 }, // Weight for 3rd choice
-                {mindsetScore: -1 }, // Weight for 4th choice
+                { captainbackup1: +1, walletwhisperer7: +1 }, // Weight for 1st choice
+                { detectivedata5: +1, lifestrategist6: +1 }, // Weight for 2nd choice
+                { ultimatechillpill3: +1, connectioncurator8: +1 }, // Weight for 3rd choice
+                { thefunnomad4: +1, whynotwanderer2: +1 }, // Weight for 4th choice
                 ]
         },
         // QUESTION 8 // (show fact bubble)
         {
             question: "You have to grab one thing in an emergency. Which do you choose?",
             choices: [
-                "My important documents",
-                "A snack stash worthy of surviving MRT breakdowns",
-                "The sentimental item that makes me go “aiya, cannot leave this behind”",
-                "My phone/photos (because memories are in there)"],
+                "Important documents",
+                "My emergency snack bag",
+                "My favourite keepsake (My lucky souvenir)",
+                "My phone/photos"],
             weights: [
-                {protectionScore: +2 }, // Weight for 1st choice
-                {experienceScore: +1 }, // Weight for 2nd choice
-                {experienceScore: +2 }, // Weight for 3rd choice
-                {protectionScore: +1, experienceScore: +1 }, // Weight for 4th choice
+                { captainbackup1: +1, detectivedata5: +1 }, // Weight for 1st choice
+                { walletwhisperer7: +1, ultimatechillpill3: +1 }, // Weight for 2nd choice
+                { connectioncurator8: +1, thefunnomad4: +1 }, // Weight for 3rd choice
+                { thefunnomad4: +1, whynotwanderer2: +1 }, // Weight for 4th choice
                 ]
         },
         // QUESTION 9 //
@@ -138,13 +138,13 @@ function displayQuiz(){
             choices: [
                 "Say 'Yes! Tell me more!'",
                 "Ask 'What's the catch?'",
-                "Politely decline with a smile",
+                "Smile and say no",
                 "Only if it's short and fun"],
             weights: [
-                {contactScore: +3, mindsetScore: +2}, // Weight for 1st choice
-                {contactScore: +1, mindsetScore: +1}, // Weight for 2nd choice
-                {budgetScore: +1}, // Weight for 3rd choice
-                {mindsetScore: +1}, // Weight for 4th choice
+                { captainbackup1: +1, detectivedata5: +1 }, // Weight for 1st choice
+                { lifestrategist6: +1, walletwhisperer7: +1 }, // Weight for 2nd choice
+                { ultimatechillpill3: +1, whynotwanderer2: +1 }, // Weight for 3rd choice
+                { thefunnomad4: +1, connectioncurator8: +1 }, // Weight for 4th choice
                 ]
         },
         // QUESTION 10 // (tip bubble)
@@ -154,23 +154,22 @@ function displayQuiz(){
                 "Knowing I’ve planned for chaos",
                 "Trying something new",
                 "Time with people I care about",
-                "Rewarding myself (Buying dessert with no regrets)"],
+                "Treating myself (Buying dessert with no regrets)"],
             weights: [
-                {protectionScore: +2, mindsetScore: +2 },   // Weight for 1st choice
-                {experienceScore: +2, mindsetScore: +1 },   // Weight for 2nd choice
-                {mindsetScore: +1, mindsetScore: +1 },      // Weight for 3rd choice
-                {budgetScore: +1, experienceScore: +1 },    // Weight for 4th choice
+                { captainbackup1: +1, lifestrategist6: +1 }, // Weight for 1st choice
+                { whynotwanderer2: +1, thefunnomad4: +1 }, // Weight for 2nd choice
+                { connectioncurator8: +1, ultimatechillpill3: +1 }, // Weight for 3rd choice
+                { thefunnomad4: +1, walletwhisperer7: +1 }, // Weight for 4th choice
                 ]
         },  // (show fact bubble)
     ]
 
     // variables for scores //
     let currentQuestionIndex = 0;
-    let protectionScore = 0;    // low, medium, high            | max 14
-    let budgetScore = 0;        // low, medium, high            | max 9
-    let experienceScore = 0;    // new, moderate, experienced   | max 14
-    let mindsetScore = 0;       // reactive to proactive        | max 16
-    let contactScore =0;        // friendliness                 | max 9
+    let captainbackup1 = 0; let whynotwanderer2 = 0; let ultimatechillpill3 = 0;
+    let thefunnomad4 = 0; let detectivedata5 =0; let lifestrategist6 =0; 
+    let walletwhisperer7 =0; let connectioncurator8 =0;
+
     let resultType = "";
     let resultImage = "";
 
@@ -231,7 +230,7 @@ function displayQuiz(){
     ////////////////////////////////
 
     document.getElementById('begin-intro').addEventListener('click', function() {
-        console.log("clicked on walkies")
+        console.log("clicked on start")
         document.getElementById('home').style.display = 'none';
         document.getElementById('intro-page').style.display = 'block';
     });
@@ -241,7 +240,7 @@ function displayQuiz(){
     ///////////////////////////////
 
     document.getElementById('begin-quiz').addEventListener('click', function() {
-        console.log("clicked on pawceed")
+        console.log("clicked on steady")
         document.getElementById('intro-page').style.display = 'none';
         document.getElementById('quiz-page').style.display = 'block';
     });
@@ -300,21 +299,14 @@ function displayQuiz(){
         console.log("Selected choice weight:", selectedChoiceWeight);
 
             //Update scores based on weight of selected choice
-            if (selectedChoiceWeight.hasOwnProperty('protectionScore')) {
-                protectionScore += selectedChoiceWeight.protectionScore;
-            }
-            if (selectedChoiceWeight.hasOwnProperty('budgetScore')) {
-                budgetScore += selectedChoiceWeight.budgetScore;
-            }
-            if (selectedChoiceWeight.hasOwnProperty('experienceScore')) {
-                experienceScore += selectedChoiceWeight.experienceScore;
-            }
-            if (selectedChoiceWeight.hasOwnProperty('mindsetScore')) {
-                mindsetScore += selectedChoiceWeight.mindsetScore;
-            }
-            if (selectedChoiceWeight.hasOwnProperty('contactScore')) {
-                contactScore += selectedChoiceWeight.contactScore;
-            }
+            if (selectedChoiceWeight.hasOwnProperty('captainbackup1')) {    captainbackup1 += selectedChoiceWeight.captainbackup1;}
+            if (selectedChoiceWeight.hasOwnProperty('whynotwanderer2')) {   whynotwanderer2 += selectedChoiceWeight.whynotwanderer2;}
+            if (selectedChoiceWeight.hasOwnProperty('ultimatechillpill3')) {   ultimatechillpill3 += selectedChoiceWeight.ultimatechillpill3;}
+            if (selectedChoiceWeight.hasOwnProperty('thefunnomad4')) {  thefunnomad4 += selectedChoiceWeight.thefunnomad4;}
+            if (selectedChoiceWeight.hasOwnProperty('detectivedata5')) {  detectivedata5 += selectedChoiceWeight.detectivedata5;}
+            if (selectedChoiceWeight.hasOwnProperty('lifestrategist6')) {  lifestrategist6 += selectedChoiceWeight.lifestrategist6;}
+            if (selectedChoiceWeight.hasOwnProperty('walletwhisperer7')) {  walletwhisperer7 += selectedChoiceWeight.walletwhisperer7;}
+            if (selectedChoiceWeight.hasOwnProperty('connectioncurator8')) {  connectioncurator8 += selectedChoiceWeight.connectioncurator8;}
 
         //Move to the next question
         currentQuestionIndex++;
@@ -392,49 +384,33 @@ function displayQuiz(){
     ////////////////////////////////////////////
     function calculateAndDisplayResult(){
         console.log("Quiz completed!");
-        console.log("Scores:", {
-            protectionScore,
-            budgetScore,
-            experienceScore,
-            mindsetScore,
-            contactScore,
-        });
+        const scores = {captainbackup1, whynotwanderer2, ultimatechillpill3, thefunnomad4,
+            detectivedata5, lifestrategist6, walletwhisperer7, connectioncurator8,
+        };
+        console.log("Scores:", scores);
 
 
-        // Scoring system //
+        // Find top persona //
+        let topPersona = null; let topScore = -Infinity;
+        for (const persona in scores){
+            if (scores[persona] > topScore){
+                topPersona = persona;
+                topScore = scores[persona];
+            }
+        }
 
-        if (protectionScore >= 10 && experienceScore >= 5 && mindsetScore >= 6) {
-            resultImage = "R1.png"; 
-            resultType = "Captain Backup";
-        }
-        else if (experienceScore <= 4 && mindsetScore >= 6 && contactScore >= 1) {
-            resultImage = "R2.png"; 
-            resultType = "The Why-Not Wanderer";
-        }
-        else if (budgetScore <= 5 && experienceScore >= 5 && mindsetScore <= 6) {
-            resultImage = "R3.png"; 
-            resultType = "The Chill Pill";
-        }
-        else if (mindsetScore >= 8 && protectionScore <= 6) {
-            resultImage = "R4.png"; 
-            resultType = "The Fun Nomad";
-        }
-        else if (mindsetScore >= 7 && (experienceScore>=6 || protectionScore >=6)) {
-            resultImage = "R5.png"; 
-            resultType = "Detective Data";
-        }
-        else if (protectionScore >= 6 && experienceScore >= 5 && mindsetScore >= 6) {
-            resultImage = "R6.png"; 
-            resultType = "The Life Strategist";
-        }
-        else if (budgetScore >= 6 && (contactScore <= 1 || protectionScore <= 5) ) {
-            resultImage = "R7.png"; 
-            resultType = "Wallet Whisperer";
-        }
-        else {
-            resultImage = "R8.png"; 
-            resultType = "The Connection Curator";
-        }
+        // Persona mapping (ResultImage and resultType) // 
+        const personaMap = {
+            captainbackup1: { image: "R1.png", type: "Captain Backup" },
+            whynotwanderer2: { image: "R2.png", type: "The Why-Not Wanderer" },
+            ultimatechillpill3: { image: "R3.png", type: "The Chill Pill" },
+            thefunnomad4: { image: "R4.png", type: "The Fun Nomad" },
+            detectivedata5: { image: "R5.png", type: "Detective Data" },
+            lifestrategist6: { image: "R6.png", type: "The Life Strategist" },
+            walletwhisperer7: { image: "R7.png", type: "Wallet Whisperer" },
+            connectioncurator8: { image: "R8.png", type: "The Connection Curator" }
+        };
+        const { image: resultImage, type: resultType } = personaMap[topPersona];
 
         // Send quiz results to Google Sheets (for skipped contact form)
         sendQuizResults();
@@ -473,11 +449,14 @@ function displayQuiz(){
         // Add form fields - include a flag to indicate this is quiz results only
         const fields = {
             resultType: resultType,
-            protectionScore: protectionScore,
-            budgetScore: budgetScore,
-            experienceScore: experienceScore,
-            mindsetScore: mindsetScore,
-            contactScore: contactScore,
+            captainbackup1:     captainbackup1,
+            whynotwanderer2:    whynotwanderer2,
+            ultimatechillpill3: ultimatechillpill3,
+            thefunnomad4:       thefunnomad4,
+            detectivedata5:     detectivedata5,
+            lifestrategist6:    lifestrategist6,
+            walletwhisperer7:   walletwhisperer7,
+            connectioncurator8: connectioncurator8,
             submissionType: "quiz_results_only", // Flag to indicate this goes to results sheet
             timestamp: new Date().toISOString(),
             interestedInInsurance: "false",
@@ -550,11 +529,14 @@ function displayQuiz(){
                 phone: phone,
                 petType: petType,
                 resultType: resultType,
-                protectionScore: protectionScore,
-                budgetScore: budgetScore,
-                experienceScore: experienceScore,
-                mindsetScore: mindsetScore,
-                contactScore: contactScore,
+                captainbackup1:     captainbackup1,
+                whynotwanderer2:    whynotwanderer2,
+                ultimatechillpill3: ultimatechillpill3,
+                thefunnomad4:       thefunnomad4,
+                detectivedata5:     detectivedata5,
+                lifestrategist6:    lifestrategist6,
+                walletwhisperer7:   walletwhisperer7,
+                connectioncurator8: connectioncurator8,
                 submissionType: "contact_form", // Flag to indicate this goes to contact sheet
                 timestamp: new Date().toISOString(),
                 interestedInInsurance: "true",
@@ -626,7 +608,7 @@ document.addEventListener("DOMContentLoaded", function () {
         shareButton.addEventListener("click", function () {
             const shareData = {
                 title: "AnimePersona",
-                text: "I just found out my Anime Persona! 🌟 Try it too!",
+                text: "I just found out my Persona! 🌟 Try it too!",
                 url: window.location.href,
             };
 
@@ -650,6 +632,5 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
-
 
 
