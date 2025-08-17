@@ -366,25 +366,13 @@ function displayQuiz(){
         console.log("Quiz completed! Showing contact page...");
         // calculate result type & image for later use // --- didnt use
 
-       /* // Hide quiz page, show contact page & hide result page
+        // Hide quiz page, show contact page & hide result page
         const quizPage = document.getElementById("quiz-page");
         const contactPage = document.getElementById("contact-page");
         const resultPage = document.getElementById("result-page");
         if (resultPage) resultPage.style.display = "none";
         if (quizPage) quizPage.style.display = "none";
-        if (contactPage) contactPage.style.display = "block"; */
-
-        // List of all your pages
-      const pages = ["home", "intro-page", "quiz-page", "contact-page", "result-page"];
-
-        // Hide all pages
-      pages.forEach(id => {
-          document.getElementById(id).style.display = "none";
-      });
-
-      // Show the requested page
-      document.getElementById(pageId).style.display = "block";
-    }
+        if (contactPage) contactPage.style.display = "block"; 
 
         // Set up form submission handler
         setupContactForm();
@@ -612,7 +600,51 @@ function displayQuiz(){
 }
 
 // Start the quiz
-displayQuiz();
+//displayQuiz();
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Utility: show only one page at a time
+  function showPage(pageId) {
+    const pages = ["home", "intro-page", "quiz-page", "result-page", "contact-page"];
+    pages.forEach(id => {
+      document.getElementById(id).style.display = "none";
+    });
+    document.getElementById(pageId).style.display = "block";
+  }
+
+  // ------------------ PAGE FLOW ------------------
+
+  // Home → Intro
+  document.getElementById("begin-intro").addEventListener("click", function () {
+    showPage("intro-page");
+  });
+
+  // Intro → Quiz
+  document.getElementById("begin-quiz").addEventListener("click", function () {
+    showPage("quiz-page");
+    startQuiz();  // ← your quiz starts here
+  });
+
+  // Quiz → Results
+  window.calculateAndDisplayResult = function () {
+    showPage("result-page");
+    // your result calculation + rendering logic here
+  };
+
+  // Results → Contact
+  window.showContactPage = function () {
+    showPage("contact-page");
+  };
+
+  // Contact → Results (skip button)
+  document.getElementById("skip-to-results").addEventListener("click", function () {
+    calculateAndDisplayResult();
+  });
+
+  // Results → Home
+  document.getElementById("back-to-home").addEventListener("click", function () {
+    showPage("home");
+  });
 
 ////////////////////////
 // Event - Share Quiz //
@@ -644,11 +676,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+});
+
 // Test the popup
 /*
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
