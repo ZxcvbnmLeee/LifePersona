@@ -1050,9 +1050,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const formData = new FormData(form);
 
-      // inside setupContactForm()
-      const resultTypeInput = document.getElementById("resultType");
-      if (resultTypeInput) resultTypeInput.value = resultType; // <-- use correct variable
+      fetch(form.action, {
+        method: "POST",
+        body: formData
+      })
 
       .then(response => response.text())
       .then(data => {
@@ -1066,3 +1067,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
