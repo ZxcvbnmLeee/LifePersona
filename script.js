@@ -1,5 +1,6 @@
 console.log("Script loaded!");
 
+
 // Wait for page to load before running
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM loaded, starting quiz...");
@@ -645,6 +646,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
