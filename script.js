@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Replace with your Google Apps Script Web App URL (from Version 1)
   const GOOGLE_SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbzOITQWdJaEcP4BLLGgTct-GthgpT3lnf8ZfQ3HgMZ9FAIYItj-oSJRPnMP708W_adQ/exec";
+    "https://script.google.com/macros/s/AKfycbyCu7P_RDUrwtMSX6CbbXBOkDuBnnKUFxIkJ7Ez7is-kEocfMVgG3XxegOrwGVuwdUx/exec";
 
 
 function displayQuiz(){
@@ -632,6 +632,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
