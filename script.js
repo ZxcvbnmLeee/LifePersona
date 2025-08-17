@@ -1,5 +1,6 @@
 console.log("Script loaded!");
 
+
 // Your Apps Script Web App URL
 const GOOGLE_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbyCu7P_RDUrwtMSX6CbbXBOkDuBnnKUFxIkJ7Ez7is-kEocfMVgG3XxegOrwGVuwdUx/exec";
@@ -540,3 +541,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
