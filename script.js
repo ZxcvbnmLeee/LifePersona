@@ -513,6 +513,32 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  
+  const form = document.getElementById("insurance-form");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // stop page reload
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        console.log("Form submitted successfully!", data);
+        // show results after successful send
+        calculateAndDisplayResult();
+      })
+      .catch(error => {
+        console.error("Error!", error.message);
+        document.getElementById("form-message").textContent = "Something went wrong. Try again!";
+      });
+    });
+  }
 });
+
 
 
