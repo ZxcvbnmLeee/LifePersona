@@ -170,7 +170,7 @@ function displayQuiz(){
     let thefunnomad4 = 0; let detectivedata5 =0; let lifestrategist6 =0; 
     let walletwhisperer7 =0; let connectioncurator8 =0;
 
-    let resultType = resultType;
+    let resultType = "";
     let resultImage = "";
 
     ////////////////////////////
@@ -410,7 +410,7 @@ function displayQuiz(){
             walletwhisperer7: { image: "R7.png", type: "Wallet Whisperer" },
             connectioncurator8: { image: "R8.png", type: "The Connection Curator" }
         };
-        const { image: resultImage, type: resultType } = personaMap[topPersona];
+        const { image: resultImage, resultType: resultType } = personaMap[topPersona];
 
         // Send quiz results to Google Sheets (for skipped contact form)
         sendQuizResults();
@@ -632,6 +632,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
