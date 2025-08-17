@@ -600,8 +600,6 @@ function displayQuiz(){
 }
 
 // Start the quiz
-//displayQuiz();
-
 document.addEventListener("DOMContentLoaded", function () {
   // Utility: show only one page at a time
   function showPage(pageId) {
@@ -622,7 +620,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Intro → Quiz
   document.getElementById("begin-quiz").addEventListener("click", function () {
     showPage("quiz-page");
-    startQuiz();  // ← your quiz starts here
+    displayQuiz();  // ← your quiz starts here
   });
 
   // Quiz → Results
@@ -683,6 +681,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
