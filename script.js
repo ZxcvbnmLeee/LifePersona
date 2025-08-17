@@ -395,6 +395,10 @@ function startQuiz() {
     const messageDiv = document.getElementById("form-message");
     if (!form) return;
 
+    
+    const resultTypeEl = document.getElementById("result-type"); // <-- fixed id
+    if (resultTypeEl) resultTypeEl.textContent = resultType;
+
     // prevent duplicate handler
     form.onsubmit = null;
 
@@ -539,6 +543,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
 
