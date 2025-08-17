@@ -395,10 +395,6 @@ function startQuiz() {
     const messageDiv = document.getElementById("form-message");
     if (!form) return;
 
-    
-    const resultTypeEl = document.getElementById("result-type"); // <-- fixed id
-    if (resultTypeEl) resultTypeEl.textContent = resultType;
-
     // prevent duplicate handler
     form.onsubmit = null;
 
@@ -536,6 +532,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // show results after successful send
         calculateAndDisplayResult();
       })
+      // hide contact form, show result page
+      document.getElementById("contact-page").style.display = "none";
+      document.getElementById("result-page").style.display = "block";
+    })
       .catch(error => {
         console.error("Error!", error.message);
         document.getElementById("form-message").textContent = "Something went wrong. Try again!";
@@ -543,6 +543,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
 
