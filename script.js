@@ -597,6 +597,12 @@ function startQuiz(){
             });
     });
 
+    // Contact form "Yes, please reach out!" → Results
+    document.getElementById("contact-submit").addEventListener("click", function (e) {
+        e.preventDefault(); // prevent the form from refreshing the page
+        calculateAndDisplayResult();
+    });
+    
 }
 
 // Start the quiz
@@ -682,3 +688,4 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
