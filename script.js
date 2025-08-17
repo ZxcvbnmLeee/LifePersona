@@ -330,7 +330,7 @@ function startQuiz() {
     resultType = type;
 
     // Send quiz-only results (if they skipped contact)
-   sendQuizResults();
+    sendQuizResults();
 
     // Render
     const resultImageDiv = document.getElementById("result-image");
@@ -468,7 +468,6 @@ function startQuiz() {
       setTimeout(() => {
         calculateAndDisplayResult();
       }, 1200);
-      
     });
   }
 
@@ -515,8 +514,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-
-
-
 
