@@ -435,10 +435,13 @@ function setupContactForm() {
     e.preventDefault();
 
     // Get form values
+    const formData = new FormData(form);
     const name = document.getElementById("user-name").value;
     const email = document.getElementById("user-email").value;
     const phone = document.getElementById("user-phone").value;
     const interestType = document.getElementById("pet-type").value;
+
+    formData.append("resultType", resultType);
 
     messageDiv.innerHTML = "Sending your information... 🐾";
     messageDiv.className = "";
@@ -503,12 +506,24 @@ function setupContactForm() {
     messageDiv.className = "success";
 
     // Show results page (no recalculation!)
-    setTimeout(() => {
-  displaySavedResult();
-}, 1200);
+    try {
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      body: formData,
+    });
 
+    const data = await response.json();
+    console.log("Success:", data);
+
+    // Show the saved result after submission
+    setTimeout(() => {
+      displaySavedResult();
+    }, 1200);
+
+  } catch (error) {
+    console.error("Error!", error.message);
+  }
   });
-}
 
   // kick off first question
   displayCurrentQuestion();
@@ -553,5 +568,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
