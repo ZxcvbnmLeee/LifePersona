@@ -405,7 +405,7 @@ function startQuiz() {
       const name = document.getElementById("user-name").value;
       const email = document.getElementById("user-email").value;
       const phone = document.getElementById("user-phone").value;
-      const interestType = document.getElementById("pet-type").value; // <-- was interest-type
+      const interestType = document.getElementById("interest-type").value; // <-- was interest-type
 
       messageDiv.innerHTML = "Sending your information... 🐾";
       messageDiv.className = "";
@@ -514,3 +514,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
