@@ -393,6 +393,7 @@ function startQuiz() {
   function setupContactForm() {
     const form = document.getElementById("insurance-form");
     const messageDiv = document.getElementById("form-message");
+    document.getElementById("resultType").value = userResultType;
     if (!form) return;
 
     // prevent duplicate handler
@@ -532,9 +533,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // show results after successful send
         calculateAndDisplayResult();
       })
-      // hide contact form, show result page
-      document.getElementById("contact-page").style.display = "none";
-      document.getElementById("result-page").style.display = "block";
     })
       .catch(error => {
         console.error("Error!", error.message);
@@ -542,6 +540,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
 
 
 
