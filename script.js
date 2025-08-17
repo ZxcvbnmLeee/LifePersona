@@ -618,8 +618,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Intro → Quiz
-  document.getElementById("begin-quiz").addEventListener("click", function () {
-    showPage("quiz-page");
+  //document.getElementById("begin-quiz").addEventListener("click", function () {
+  //  showPage("quiz-page");
     displayQuiz();  // ← your quiz starts here
   });
 
@@ -681,6 +681,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
