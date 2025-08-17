@@ -17,7 +17,170 @@ function startQuiz() {
   console.log("Starting quiz…");
 
   const questions = [
-    // ... (your 10 questions unchanged)
+    // QUESTION 1
+    {
+      question:
+        "You've been planning a project for months, but an unexpected change forces you to alter your plan. What will you do next?",
+      choices: [
+        "Make a backup plan on the spot",
+        "Call someone I trust",
+        "Go with the flow",
+        "Panic for 2 mins, then decide",
+      ],
+      weights: [
+        { captainbackup1: +1, detectivedata5: +1 },
+        { connectioncurator8: +1, whynotwanderer2: +1 },
+        { whynotwanderer2: +1, ultimatechillpill3: +1 },
+        { thefunnomad4: +1, lifestrategist6: +1 },
+      ],
+    },
+    // QUESTION 2
+    {
+      question: "Which one feels most like 'security' to you?",
+      choices: [
+        "A big fat savings account",
+        "Friends who pick me up (and feed me)",
+        "A life plan that looks like IKEA instructions",
+        "The ability to eat carbs without guilt",
+      ],
+      weights: [
+        { captainbackup1: +1, walletwhisperer7: +1 },
+        { connectioncurator8: +1, ultimatechillpill3: +1 },
+        { lifestrategist6: +1, detectivedata5: +1 },
+        { thefunnomad4: +1, whynotwanderer2: +1 },
+      ],
+    },
+    // QUESTION 3
+    {
+      question: "Life throws you a plot twist. What's your first reaction?",
+      choices: [
+        "Open 47 browser tabs (Google is my friend)",
+        "Mum... you free?",
+        "Eh, I'll freestyle it",
+        "Pretend nothing happened",
+      ],
+      weights: [
+        { captainbackup1: +1, detectivedata5: +1 },
+        { connectioncurator8: +1, ultimatechillpill3: +1 },
+        { whynotwanderer2: +1, thefunnomad4: +1 },
+        { ultimatechillpill3: +1, walletwhisperer7: +1 },
+      ],
+    },
+    // QUESTION 4
+    {
+      question: "If you could pick ONE magic life power, what would you pick?",
+      choices: [
+        "100% healthy forever",
+        "Infinite money (bye adulting)",
+        "Calm mode unlocked",
+        "Extra time to enjoy life",
+      ],
+      weights: [
+        { captainbackup1: +1, lifestrategist6: +1 },
+        { thefunnomad4: +1, walletwhisperer7: +1 },
+        { ultimatechillpill3: +1, connectioncurator8: +1 },
+        { thefunnomad4: +1, whynotwanderer2: +1 },
+      ],
+    },
+    // QUESTION 5
+    {
+      question: "Your monthly spending style looks like...",
+      choices: [
+        "Only what's necessary",
+        "Balanced spender (snacks + savings)",
+        "Big spender on experiences",
+        "I close my eyes and hope for the best",
+      ],
+      weights: [
+        { captainbackup1: +1, walletwhisperer7: +1 },
+        { lifestrategist6: +1, ultimatechillpill3: +1 },
+        { whynotwanderer2: +1, thefunnomad4: +1 },
+        { thefunnomad4: +1, connectioncurator8: +1 },
+      ],
+    },
+    // QUESTION 6
+    {
+      question: "Whose advice do you trust most?",
+      choices: [
+        "A famous person on a TED Talk",
+        "Family and friends",
+        "Someone who shows clear proof",
+        "I trust my own gut",
+      ],
+      weights: [
+        { detectivedata5: +1, whynotwanderer2: +1 },
+        { connectioncurator8: +1, ultimatechillpill3: +1 },
+        { lifestrategist6: +1, captainbackup1: +1 },
+        { thefunnomad4: +1, walletwhisperer7: +1 },
+      ],
+    },
+    // QUESTION 7
+    {
+      question:
+        "If life was a weather forecast, what do you do before the storm?",
+      choices: [
+        "Stock up & prepare like a survival drama hero",
+        "Watch the news and wait",
+        "Just stay home and chill",
+        "Hope the storm skips my area",
+      ],
+      weights: [
+        { captainbackup1: +1, walletwhisperer7: +1 },
+        { detectivedata5: +1, lifestrategist6: +1 },
+        { ultimatechillpill3: +1, connectioncurator8: +1 },
+        { thefunnomad4: +1, whynotwanderer2: +1 },
+      ],
+    },
+    // QUESTION 8
+    {
+      question:
+        "You have to grab one thing in an emergency. Which do you choose?",
+      choices: [
+        "Important documents",
+        "My emergency snack bag",
+        "My favourite keepsake (My lucky souvenir)",
+        "My phone/photos",
+      ],
+      weights: [
+        { captainbackup1: +1, detectivedata5: +1 },
+        { walletwhisperer7: +1, ultimatechillpill3: +1 },
+        { connectioncurator8: +1, thefunnomad4: +1 },
+        { thefunnomad4: +1, whynotwanderer2: +1 },
+      ],
+    },
+    // QUESTION 9
+    {
+      question:
+        "A wise merlion says: 'I can give you tips for a smoother future!' You... ",
+      choices: [
+        "Say 'Yes! Tell me more!'",
+        "Ask 'What's the catch?'",
+        "Smile and say no",
+        "Only if it's short and fun",
+      ],
+      weights: [
+        { captainbackup1: +1, detectivedata5: +1 },
+        { lifestrategist6: +1, walletwhisperer7: +1 },
+        { ultimatechillpill3: +1, whynotwanderer2: +1 },
+        { thefunnomad4: +1, connectioncurator8: +1 },
+      ],
+    },
+    // QUESTION 10
+    {
+      question: "What makes you feel happiest at the end of the day?",
+      choices: [
+        "Knowing I’ve planned for chaos",
+        "Trying something new",
+        "Time with people I care about",
+        "Treating myself (Buying dessert with no regrets)",
+      ],
+      weights: [
+        { captainbackup1: +1, lifestrategist6: +1 },
+        { whynotwanderer2: +1, thefunnomad4: +1 },
+        { connectioncurator8: +1, ultimatechillpill3: +1 },
+        { thefunnomad4: +1, walletwhisperer7: +1 },
+      ],
+    },
   ];
 
   // scores / state
@@ -174,7 +337,7 @@ function startQuiz() {
     if (resultImageDiv) {
       resultImageDiv.innerHTML = `<img src="./images/${image}" class="result-image" alt="Your Persona Result">`;
     }
-    const resultTypeEl = document.getElementById("result-type");
+    const resultTypeEl = document.getElementById("result-type"); // <-- fixed id
     if (resultTypeEl) resultTypeEl.textContent = resultType;
 
     showPage("result-page");
@@ -230,8 +393,6 @@ function startQuiz() {
   function setupContactForm() {
     const form = document.getElementById("insurance-form");
     const messageDiv = document.getElementById("form-message");
-    const hiddenResult = document.getElementById("resultType");
-    if (hiddenResult) hiddenResult.value = resultType;
     if (!form) return;
 
     // prevent duplicate handler
@@ -240,15 +401,16 @@ function startQuiz() {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
+      // FIXED IDS HERE:
       const name = document.getElementById("user-name").value;
       const email = document.getElementById("user-email").value;
       const phone = document.getElementById("user-phone").value;
-      const interestType = document.getElementById("pet-type").value;
+      const interestType = document.getElementById("pet-type").value; // <-- was interest-type
 
       messageDiv.innerHTML = "Sending your information... 🐾";
       messageDiv.className = "";
 
-      const submitBtn = document.getElementById("contact-submit");
+      const submitBtn = document.getElementById("contact-submit"); // <-- was submit-contact
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = "Sending...";
@@ -269,7 +431,7 @@ function startQuiz() {
         name,
         email,
         phone,
-        interestType,
+        interestType, // server expects this name
         resultType,
         captainbackup1,
         whynotwanderer2,
