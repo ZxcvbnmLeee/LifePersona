@@ -343,7 +343,7 @@ function startQuiz() {
   showPage("result-page");
 }
 
-/* 🔥 New helper: display result without recalculation */
+/* New helper: display result without recalculation */
 function displaySavedResult() {
   const personaMap = {
     captainbackup1: { image: "R1.png", type: "Captain Backup" },
@@ -421,7 +421,6 @@ function displaySavedResult() {
     }, 1000);
   }
 
-  /* Contact form submit → send + show results */
   /* Contact form submit → send + show results */
 function setupContactForm() {
   const form = document.getElementById("insurance-form");
@@ -515,12 +514,17 @@ function setupContactForm() {
     const data = await response.json();
     console.log("Success:", data);
 
-    // Show the saved result after submission
-    setTimeout(() => {
-      displaySavedResult();
-    }, 1200);
+    
+  // Render
+  const resultImageDiv = document.getElementById("result-image");
+  if (resultImageDiv) {
+    resultImageDiv.innerHTML = `<img src="./images/${image}" class="result-image" alt="Your Persona Result">`;
+  }
+  const resultTypeEl = document.getElementById("result-type");
+  if (resultTypeEl) resultTypeEl.textContent = resultType;
 
-  } catch (error) {
+  showPage("result-page");
+    } catch (error) {
     console.error("Error!", error.message);
   }
   });
@@ -568,6 +572,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
 
