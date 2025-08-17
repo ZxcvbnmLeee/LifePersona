@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM loaded, starting quiz...");
 })
 
+
 // Replace with your Google Apps Script Web App URL (from Version 1)
   const GOOGLE_SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbx7S_mgrfSwg8p9DpTTB-79F0PWGtZMnfjDUbNTirkotqfMNooz6qmTpVnFuyjR-1Am/exec";
@@ -678,6 +679,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
