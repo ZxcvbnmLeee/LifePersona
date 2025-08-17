@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "https://script.google.com/macros/s/AKfycbyCu7P_RDUrwtMSX6CbbXBOkDuBnnKUFxIkJ7Ez7is-kEocfMVgG3XxegOrwGVuwdUx/exec";
 
 
-function displayQuiz(){
+function startQuiz(){
     const questions = [
         // QUESTION 1 //
         {
@@ -618,10 +618,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Intro → Quiz
-  //document.getElementById("begin-quiz").addEventListener("click", function () {
-  //  showPage("quiz-page");
-    displayQuiz();  // ← your quiz starts here
+  document.getElementById("begin-quiz").addEventListener("click", function () {
+    showPage("quiz-page");
+    startQuiz();  // Start loading first question
   });
+
 
   // Quiz → Results
   window.calculateAndDisplayResult = function () {
@@ -681,23 +682,3 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
