@@ -170,7 +170,7 @@ function displayQuiz(){
     let thefunnomad4 = 0; let detectivedata5 =0; let lifestrategist6 =0; 
     let walletwhisperer7 =0; let connectioncurator8 =0;
 
-    let resultType = "";
+    let resultType = resultType;
     let resultImage = "";
 
     ////////////////////////////
@@ -632,6 +632,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
