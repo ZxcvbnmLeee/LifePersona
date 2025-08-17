@@ -466,8 +466,8 @@ function startQuiz() {
       messageDiv.className = "success";
 
       setTimeout(() => {
-        calculateAndDisplayResult();
-      }, 1200);
+        showPage("result-page");
+}, 1200);
     });
   }
 
@@ -514,3 +514,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
