@@ -401,14 +401,14 @@ function displayQuiz(){
 
         // Persona mapping (ResultImage and resultType) // 
         const personaMap = {
-            captainbackup1: { image: "R1.png", type: "Captain Backup" },
-            whynotwanderer2: { image: "R2.png", type: "The Why-Not Wanderer" },
-            ultimatechillpill3: { image: "R3.png", type: "The Chill Pill" },
-            thefunnomad4: { image: "R4.png", type: "The Fun Nomad" },
-            detectivedata5: { image: "R5.png", type: "Detective Data" },
-            lifestrategist6: { image: "R6.png", type: "The Life Strategist" },
-            walletwhisperer7: { image: "R7.png", type: "Wallet Whisperer" },
-            connectioncurator8: { image: "R8.png", type: "The Connection Curator" }
+            captainbackup1: { image: "R1.png", resultType: "Captain Backup" },
+            whynotwanderer2: { image: "R2.png", resultType: "The Why-Not Wanderer" },
+            ultimatechillpill3: { image: "R3.png", resultType: "The Chill Pill" },
+            thefunnomad4: { image: "R4.png", resultType: "The Fun Nomad" },
+            detectivedata5: { image: "R5.png", resultType: "Detective Data" },
+            lifestrategist6: { image: "R6.png", resultType: "The Life Strategist" },
+            walletwhisperer7: { image: "R7.png", resultType: "Wallet Whisperer" },
+            connectioncurator8: { image: "R8.png", resultType: "The Connection Curator" }
         };
         const { image: resultImage, resultType: resultType } = personaMap[topPersona];
 
@@ -418,7 +418,7 @@ function displayQuiz(){
         // Display image & type into result section
         const resultImageDiv = document.getElementById("result-image");
         if (resultImageDiv) {resultImageDiv.innerHTML = `<img src="./images/${resultImage}" class="result-image" alt="Your Persona Result">`;}
-        const resultTypeDiv = document.getElementById("result-type");
+        const resultTypeDiv = document.getElementById("resultType");
         if (resultTypeDiv){resultTypeDiv.textContent = resultType;}
 
         // Hide the contact page, show the result page
@@ -632,6 +632,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
