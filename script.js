@@ -1,5 +1,6 @@
 console.log("Script loaded!");
 
+
 // Your Apps Script Web App URL
 const GOOGLE_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbyCu7P_RDUrwtMSX6CbbXBOkDuBnnKUFxIkJ7Ez7is-kEocfMVgG3XxegOrwGVuwdUx/exec";
@@ -393,6 +394,7 @@ function startQuiz() {
   function setupContactForm() {
     const form = document.getElementById("insurance-form");
     const messageDiv = document.getElementById("form-message");
+    document.getElementById("resultType").value = userResultType;
     if (!form) return;
 
     // prevent duplicate handler
@@ -405,7 +407,7 @@ function startQuiz() {
       const name = document.getElementById("user-name").value;
       const email = document.getElementById("user-email").value;
       const phone = document.getElementById("user-phone").value;
-      const interestType = document.getElementById("pet-type").value; // <-- was interest-type
+      const interestType = document.getElementById("pet-type").value; // <-- was pet-type
 
       messageDiv.innerHTML = "Sending your information... 🐾";
       messageDiv.className = "";
@@ -513,4 +515,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
+  
+  const form = document.getElementById("insurance-form");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // stop page reload
+
+      const formData = new FormData(form);
+
+      // inside setupContactForm()
+      const resultTypeInput = document.getElementById("resultType");
+      if (resultTypeInput) resultTypeInput.value = resultType; // <-- use correct variable
+
+      .then(response => response.text())
+      .then(data => {
+        console.log("Form submitted successfully!", data);
+        // show results after successful send
+        calculateAndDisplayResult();
+      })
+    })
+      .catch(error => {
+        console.error("Error!", error.message);
+        document.getElementById("form-message").textContent = "Something went wrong. Try again!";
+      });
+    });
+  }); 
