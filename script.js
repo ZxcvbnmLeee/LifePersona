@@ -330,7 +330,7 @@ function startQuiz() {
     resultType = type;
 
     // Send quiz-only results (if they skipped contact)
-    sendQuizResults();
+   // sendQuizResults();
 
     // Render
     const resultImageDiv = document.getElementById("result-image");
@@ -342,6 +342,9 @@ function startQuiz() {
 
     showPage("result-page");
   }
+  
+    // Send quiz-only results (if they skipped contact)
+    sendQuizResults();
   window.calculateAndDisplayResult = calculateAndDisplayResult;
 
   /* Send quiz-only results */
@@ -515,5 +518,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
