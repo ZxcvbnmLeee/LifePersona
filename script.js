@@ -290,59 +290,91 @@ function startQuiz() {
 
   /* Results */
   function calculateAndDisplayResult() {
-    console.log("Calculating result…");
+  console.log("Calculating result…");
 
-    const scores = {
-      captainbackup1,
-      whynotwanderer2,
-      ultimatechillpill3,
-      thefunnomad4,
-      detectivedata5,
-      lifestrategist6,
-      walletwhisperer7,
-      connectioncurator8,
-    };
+  const scores = {
+    captainbackup1,
+    whynotwanderer2,
+    ultimatechillpill3,
+    thefunnomad4,
+    detectivedata5,
+    lifestrategist6,
+    walletwhisperer7,
+    connectioncurator8,
+  };
 
-    let topPersona = null;
-    let topScore = -Infinity;
-    for (const k in scores) {
-      if (scores[k] > topScore) {
-        topScore = scores[k];
-        topPersona = k;
-      }
+  let topPersona = null;
+  let topScore = -Infinity;
+  for (const k in scores) {
+    if (scores[k] > topScore) {
+      topScore = scores[k];
+      topPersona = k;
     }
-
-    const personaMap = {
-      captainbackup1: { image: "R1.png", type: "Captain Backup" },
-      whynotwanderer2: { image: "R2.png", type: "The Why-Not Wanderer" },
-      ultimatechillpill3: { image: "R3.png", type: "The Chill Pill" },
-      thefunnomad4: { image: "R4.png", type: "The Fun Nomad" },
-      detectivedata5: { image: "R5.png", type: "Detective Data" },
-      lifestrategist6: { image: "R6.png", type: "The Life Strategist" },
-      walletwhisperer7: { image: "R7.png", type: "Wallet Whisperer" },
-      connectioncurator8: { image: "R8.png", type: "The Connection Curator" },
-    };
-
-    const { image, type } = personaMap[topPersona] || {
-      image: "R1.png",
-      type: "Captain Backup",
-    };
-    resultType = type;
-
-    // Send quiz-only results (if they skipped contact)
-    sendQuizResults();
-
-    // Render
-    const resultImageDiv = document.getElementById("result-image");
-    if (resultImageDiv) {
-      resultImageDiv.innerHTML = `<img src="./images/${image}" class="result-image" alt="Your Persona Result">`;
-    }
-    const resultTypeEl = document.getElementById("result-type"); // <-- fixed id
-    if (resultTypeEl) resultTypeEl.textContent = resultType;
-
-    showPage("result-page");
   }
-  window.calculateAndDisplayResult = calculateAndDisplayResult;
+
+  const personaMap = {
+    captainbackup1: { image: "R1.png", type: "Captain Backup" },
+    whynotwanderer2: { image: "R2.png", type: "The Why-Not Wanderer" },
+    ultimatechillpill3: { image: "R3.png", type: "The Chill Pill" },
+    thefunnomad4: { image: "R4.png", type: "The Fun Nomad" },
+    detectivedata5: { image: "R5.png", type: "Detective Data" },
+    lifestrategist6: { image: "R6.png", type: "The Life Strategist" },
+    walletwhisperer7: { image: "R7.png", type: "Wallet Whisperer" },
+    connectioncurator8: { image: "R8.png", type: "The Connection Curator" },
+  };
+
+  const { image, type } = personaMap[topPersona] || {
+    image: "R1.png",
+    type: "Captain Backup",
+  };
+  resultType = type;
+
+  // Send quiz-only results (if they skipped contact)
+  sendQuizResults();
+
+  // Render
+  const resultImageDiv = document.getElementById("result-image");
+  if (resultImageDiv) {
+    resultImageDiv.innerHTML = `<img src="./images/${image}" class="result-image" alt="Your Persona Result">`;
+  }
+  const resultTypeEl = document.getElementById("result-type");
+  if (resultTypeEl) resultTypeEl.textContent = resultType;
+
+  showPage("result-page");
+}
+
+/* 🔥 New helper: display result without recalculation */
+function displaySavedResult() {
+  const personaMap = {
+    captainbackup1: { image: "R1.png", type: "Captain Backup" },
+    whynotwanderer2: { image: "R2.png", type: "The Why-Not Wanderer" },
+    ultimatechillpill3: { image: "R3.png", type: "The Chill Pill" },
+    thefunnomad4: { image: "R4.png", type: "The Fun Nomad" },
+    detectivedata5: { image: "R5.png", type: "Detective Data" },
+    lifestrategist6: { image: "R6.png", type: "The Life Strategist" },
+    walletwhisperer7: { image: "R7.png", type: "Wallet Whisperer" },
+    connectioncurator8: { image: "R8.png", type: "The Connection Curator" },
+  };
+
+  // Find persona object by resultType
+  const persona = Object.values(personaMap).find(p => p.type === resultType);
+
+  const image = persona ? persona.image : "R1.png";
+  const type = persona ? persona.type : "Captain Backup";
+
+  const resultImageDiv = document.getElementById("result-image");
+  if (resultImageDiv) {
+    resultImageDiv.innerHTML = `<img src="./images/${image}" class="result-image" alt="Your Persona Result">`;
+  }
+
+  const resultTypeEl = document.getElementById("result-type");
+  if (resultTypeEl) {
+    resultTypeEl.textContent = type;
+  }
+
+  showPage("result-page");
+}
+ window.calculateAndDisplayResult = calculateAndDisplayResult;
 
   /* Send quiz-only results */
   function sendQuizResults() {
@@ -390,86 +422,93 @@ function startQuiz() {
   }
 
   /* Contact form submit → send + show results */
-  function setupContactForm() {
-    const form = document.getElementById("insurance-form");
-    const messageDiv = document.getElementById("form-message");
-    if (!form) return;
+  /* Contact form submit → send + show results */
+function setupContactForm() {
+  const form = document.getElementById("insurance-form");
+  const messageDiv = document.getElementById("form-message");
+  if (!form) return;
 
-    // prevent duplicate handler
-    form.onsubmit = null;
+  // prevent duplicate handler
+  form.onsubmit = null;
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      // FIXED IDS HERE:
-      const name = document.getElementById("user-name").value;
-      const email = document.getElementById("user-email").value;
-      const phone = document.getElementById("user-phone").value;
-      const interestType = document.getElementById("pet-type").value; // <-- was interest-type
+    // Get form values
+    const name = document.getElementById("user-name").value;
+    const email = document.getElementById("user-email").value;
+    const phone = document.getElementById("user-phone").value;
+    const interestType = document.getElementById("pet-type").value;
 
-      messageDiv.innerHTML = "Sending your information... 🐾";
-      messageDiv.className = "";
+    messageDiv.innerHTML = "Sending your information... 🐾";
+    messageDiv.className = "";
 
-      const submitBtn = document.getElementById("contact-submit"); // <-- was submit-contact
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Sending...";
-      }
+    const submitBtn = document.getElementById("contact-submit");
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+    }
 
-      const hiddenForm = document.createElement("form");
-      hiddenForm.method = "POST";
-      hiddenForm.action = GOOGLE_SCRIPT_URL;
-      hiddenForm.target = "hidden_iframe";
-      hiddenForm.style.display = "none";
+    // Hidden form for submission
+    const hiddenForm = document.createElement("form");
+    hiddenForm.method = "POST";
+    hiddenForm.action = GOOGLE_SCRIPT_URL;
+    hiddenForm.target = "hidden_iframe";
+    hiddenForm.style.display = "none";
 
-      const iframe = document.createElement("iframe");
-      iframe.name = "hidden_iframe";
-      iframe.style.display = "none";
-      document.body.appendChild(iframe);
+    const iframe = document.createElement("iframe");
+    iframe.name = "hidden_iframe";
+    iframe.style.display = "none";
+    document.body.appendChild(iframe);
 
-      const fields = {
-        name,
-        email,
-        phone,
-        interestType, // server expects this name
-        resultType,
-        captainbackup1,
-        whynotwanderer2,
-        ultimatechillpill3,
-        thefunnomad4,
-        detectivedata5,
-        lifestrategist6,
-        walletwhisperer7,
-        connectioncurator8,
-        submissionType: "contact_form",
-        timestamp: new Date().toISOString(),
-        interestedInInsurance: "true",
-      };
+    // Fields to send
+    const fields = {
+      name,
+      email,
+      phone,
+      interestType,
+      resultType,
+      captainbackup1,
+      whynotwanderer2,
+      ultimatechillpill3,
+      thefunnomad4,
+      detectivedata5,
+      lifestrategist6,
+      walletwhisperer7,
+      connectioncurator8,
+      submissionType: "contact_form",
+      timestamp: new Date().toISOString(),
+      interestedInInsurance: "true",
+    };
 
-      Object.keys(fields).forEach((key) => {
-        const input = document.createElement("input");
-        input.type = "hidden";
-        input.name = key;
-        input.value = fields[key];
-        hiddenForm.appendChild(input);
-      });
-
-      document.body.appendChild(hiddenForm);
-      hiddenForm.submit();
-
-      setTimeout(() => {
-        document.body.removeChild(hiddenForm);
-        document.body.removeChild(iframe);
-      }, 1000);
-
-      messageDiv.innerHTML = "Thank you! We'll contact you soon! 🎉";
-      messageDiv.className = "success";
-
-      setTimeout(() => {
-        showPage("result-page");
-}, 1200);
+    Object.keys(fields).forEach((key) => {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = key;
+      input.value = fields[key];
+      hiddenForm.appendChild(input);
     });
-  }
+
+    document.body.appendChild(hiddenForm);
+    hiddenForm.submit();
+
+    // Clean up
+    setTimeout(() => {
+      document.body.removeChild(hiddenForm);
+      document.body.removeChild(iframe);
+    }, 1000);
+
+    // Success message
+    messageDiv.innerHTML = "Thank you! We'll contact you soon! 🎉";
+    messageDiv.className = "success";
+
+    // Show results page (no recalculation!)
+    setTimeout(() => {
+  displaySavedResult();
+}, 1200);
+
+  });
+}
 
   // kick off first question
   displayCurrentQuestion();
@@ -514,4 +553,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
