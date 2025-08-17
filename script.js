@@ -541,8 +541,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("form-message").textContent = "Something went wrong. Try again!";
       });
     });
-  }
-});
+  });
+
 
 
 
