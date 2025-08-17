@@ -419,7 +419,7 @@ function displayQuiz(){
         const resultImageDiv = document.getElementById("result-image");
         if (resultImageDiv) {resultImageDiv.innerHTML = `<img src="./images/${resultImage}" class="result-image" alt="Your Persona Result">`;}
         const resultType = document.getElementById("resultType");
-        if (resultType){resultTypeDiv.textContent = resultType;}
+        if (resultType){resultType.textContent = resultType;}
 
         // Hide the contact page, show the result page
         document.getElementById("contact-page").style.display = "none";
@@ -632,6 +632,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
