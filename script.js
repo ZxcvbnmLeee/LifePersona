@@ -342,40 +342,6 @@ function startQuiz() {
 
   showPage("result-page");
 }
-
-/* New helper: display result without recalculation */
-function displaySavedResult() {
-  const personaMap = {
-    captainbackup1: { image: "R1.png", type: "Captain Backup" },
-    whynotwanderer2: { image: "R2.png", type: "The Why-Not Wanderer" },
-    ultimatechillpill3: { image: "R3.png", type: "The Chill Pill" },
-    thefunnomad4: { image: "R4.png", type: "The Fun Nomad" },
-    detectivedata5: { image: "R5.png", type: "Detective Data" },
-    lifestrategist6: { image: "R6.png", type: "The Life Strategist" },
-    walletwhisperer7: { image: "R7.png", type: "Wallet Whisperer" },
-    connectioncurator8: { image: "R8.png", type: "The Connection Curator" },
-  };
-
-  // Find persona object by resultType
-  const persona = Object.values(personaMap).find(p => p.type === resultType);
-
-  const image = persona ? persona.image : "R1.png";
-  const type = persona ? persona.type : "Captain Backup";
-
-  const resultImageDiv = document.getElementById("result-image");
-  if (resultImageDiv) {
-    resultImageDiv.innerHTML = `<img src="./images/${image}" class="result-image" alt="Your Persona Result">`;
-  }
-
-  const resultTypeEl = document.getElementById("result-type");
-  if (resultTypeEl) {
-    resultTypeEl.textContent = type;
-  }
-
-  showPage("result-page");
-}
- window.calculateAndDisplayResult = calculateAndDisplayResult;
-
   /* Send quiz-only results */
   function sendQuizResults() {
     const form = document.createElement("form");
@@ -434,7 +400,6 @@ function setupContactForm() {
     e.preventDefault();
 
     // Get form values
-    const formData = new FormData(form);
     const name = document.getElementById("user-name").value;
     const email = document.getElementById("user-email").value;
     const phone = document.getElementById("user-phone").value;
@@ -572,6 +537,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
 
