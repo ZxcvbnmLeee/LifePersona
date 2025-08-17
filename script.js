@@ -465,8 +465,9 @@ function startQuiz() {
       messageDiv.innerHTML = "Thank you! We'll contact you soon! 🎉";
       messageDiv.className = "success";
 
-    
+      setTimeout(() => {
         calculateAndDisplayResult();
+      }, 1200);
       
     });
   }
@@ -514,4 +515,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
