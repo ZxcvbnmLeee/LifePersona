@@ -374,15 +374,18 @@ function displayQuiz(){
         if (quizPage) quizPage.style.display = "none";
         if (contactPage) contactPage.style.display = "block"; */
 
-        // Hide other pages
-        document.getElementById("home").style.display = "none";
-        document.getElementById("intro-page").style.display = "none";
-        document.getElementById("quiz-page").style.display = "none";
-        document.getElementById("result-page").style.display = "none";
+        // List of all your pages
+      const pages = ["home", "intro-page", "quiz-page", "contact-page", "result-page"];
 
-        // Show contact page
-        document.getElementById("contact-page").style.display = "block";
-  }
+        // Hide all pages
+      pages.forEach(id => {
+          document.getElementById(id).style.display = "none";
+      });
+
+      // Show the requested page
+      document.getElementById(pageId).style.display = "block";
+    }
+
         // Set up form submission handler
         setupContactForm();
     }
@@ -646,6 +649,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
