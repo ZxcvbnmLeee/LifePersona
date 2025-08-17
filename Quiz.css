@@ -8,6 +8,7 @@ html {
   display: none;            /* Hides scrollbar on WebKit browsers */
 }
 
+
 body {
   background-image: url("./images/background.png");
   background-repeat: no-repeat;
@@ -443,3 +444,4 @@ body.quiz-background {
     padding: 10px;
   }
 }
+
