@@ -473,10 +473,18 @@ function displayQuiz(){
         // Add form fields - include a flag to indicate this is quiz results only
         const fields = {
             resultType: resultType,
-            protectionScore: protectionScore,
+            /* protectionScore: protectionScore,
             budgetScore: budgetScore,
             experienceScore: experienceScore,
-            mindsetScore: mindsetScore,
+            mindsetScore: mindsetScore, */
+            captainbackup1: captainbackup1,
+            whynotwanderer2: whynotwanderer2,
+            ultimatechillpill3: ultimatechillpill3,
+            thefunnomad4: thefunnomad4,
+            detectivedata5: detectivedata5,
+            lifestrategist6: lifestrategist6,
+            walletwhisperer7: walletwhisperer7,
+            connectioncurator8: connectioncurator8,
             contactScore: contactScore,
             submissionType: "quiz_results_only", // Flag to indicate this goes to results sheet
             timestamp: new Date().toISOString(),
@@ -550,10 +558,18 @@ function displayQuiz(){
                 phone: phone,
                 petType: petType,
                 resultType: resultType,
-                protectionScore: protectionScore,
+                /*protectionScore: protectionScore,
                 budgetScore: budgetScore,
                 experienceScore: experienceScore,
-                mindsetScore: mindsetScore,
+                mindsetScore: mindsetScore, */
+                captainbackup1: captainbackup1,
+                whynotwanderer2: whynotwanderer2,
+                ultimatechillpill3: ultimatechillpill3,
+                thefunnomad4: thefunnomad4,
+                detectivedata5: detectivedata5,
+                lifestrategist6: lifestrategist6,
+                walletwhisperer7: walletwhisperer7,
+                connectioncurator8: connectioncurator8,
                 contactScore: contactScore,
                 submissionType: "contact_form", // Flag to indicate this goes to contact sheet
                 timestamp: new Date().toISOString(),
@@ -650,6 +666,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     showTip("This is a test tip. <br>Click anywhere to dismiss.");
 })*/
+
 
 
 
