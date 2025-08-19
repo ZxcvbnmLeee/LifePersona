@@ -27,14 +27,7 @@ Adulting is already stressful enough, so why not make it shiok?
 
 ## 🧠 The Scoring System (and a little disclaimer!)
 
-As you answer each question, your choices secretly build up scores in different traits:  
-- **Protection** – How prepared or cautious you are  
-- **Experience** – How much life adventure you’ve had  
-- **Mindset** – How you think and approach situations  
-- **Budget** – How you value and manage resources  
-- **Contact** – How connected you are with people
-
-Once your scores are in, the quiz matches you with one of our **8+ Personas** — from the strategic **Captain Backup** to the free-spirited **Fun Nomad**.  
+As you answer each question, your choices secretly build up towards one of our **8 unique Personas** — from the strategic **Captain Backup** to the free-spirited **Fun Nomad**.  
 
 > ⚠️ **Disclaimer:**  
 > This quiz is **just for fun** and not based on any scientific personality model.  
@@ -52,4 +45,4 @@ Once your scores are in, the quiz matches you with one of our **8+ Personas** �
 *Inspired by Singapore culture, personality quizzes and a passion to spread awareness of financial planning in a fun way.*
 
 **✨ So... which life persona are YOU? ✨**  
-👉 [Click here to find out](https://zxcvbnmleee.github.io/AnimePersona/)
+👉 [Click here to find out](https://zxcvbnmleee.github.io/LifePersona/)
