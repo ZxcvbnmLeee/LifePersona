@@ -105,7 +105,7 @@ const questions = [
         { thefunnomad4: +1, connectioncurator8: +1 },
       ],
     },
-    // QUESTION 6
+    // QUESTION 6 (show tip bubble)
     {
       question: "Whose advice do you trust most?",
       choices: [
@@ -138,7 +138,7 @@ const questions = [
         { thefunnomad4: +1, whynotwanderer2: +1 },
       ],
     },
-    // QUESTION 8
+    // QUESTION 8 (show fact bubble)
     {
       question:
         "You have to grab one thing in an emergency. Which do you choose?",
@@ -172,7 +172,7 @@ const questions = [
         { thefunnomad4: +1, connectioncurator8: +1 },
       ],
     },
-    // QUESTION 10
+    // QUESTION 10 (tip bubble)
     {
       question: "What makes you feel happiest at the end of the day?",
       choices: [
@@ -258,6 +258,7 @@ function handleChoiceClick(choiceIndex) {
 
   const q = questions[currentQuestionIndex];
   const w = q.weights[choiceIndex] || {};
+  // console.log("Selected choice weight:", w); 
 
   captainbackup1 += w.captainbackup1 || 0;
   whynotwanderer2 += w.whynotwanderer2 || 0;
@@ -269,7 +270,42 @@ function handleChoiceClick(choiceIndex) {
   connectioncurator8 += w.connectioncurator8 || 0;
 
   currentQuestionIndex++;
+  addTipsHereIfAny(currentQuestionIndex);
   displayCurrentQuestion();
+}
+
+/* ---------- Tips Popup ---------- */
+function addTipsHereIfAny(currentQuestionIndex){
+    if (![5, 7, 9, 10].includes(currentQuestionIndex)){return;}
+    if (currentQuestionIndex === 5){
+        showTip("Quick tip: <br>People who track their spending even casually end up with more freedom for fun stuff!<br><br>* click anywhere to dismiss *");
+    } else if (currentQuestionIndex ===7){
+        showTip("Did you know?<br>70% of people admit they're not ready for big surprises...<br>until it's too late.")
+    } else if (currentQuestionIndex ===9){
+        showTip("Little secret:<br>Most future problems are solved by just being curious enough to ask.")
+    } else if (currentQuestionIndex ===10){
+        showTip("Life satisfaction studies shows:<br>Happiness = 30% planning ahead + 30% relationships + 30% fun... + 10% snacks.")
+    } 
+}
+
+function showTip(message) {
+    //console.log("tip shown:", message)
+    const tipBox = document.getElementById("tip-box"); if (!tipBox) {console.error("tip-box not found in DOM");return;}
+    tipBox.innerHTML = message;
+    tipBox.style.display = "block";
+    function hideTipOnce() {
+        //console.log("tip hidden");
+        if (tipBox) {
+            tipBox.style.display = "none";
+            tipBox.innerHTML = "";
+        }
+    }
+    // Remove any existing click listener, then add a one-time listener to close
+    document.body.removeEventListener("click", hideTipOnce);
+    // Close on click anywhere, with slight delay to avoid instand dismiss on same click
+    setTimeout(() => {
+        document.body.addEventListener("click", hideTipOnce, { once: true });
+    }, 100);
 }
 
 function showContactPage() {
@@ -494,4 +530,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
