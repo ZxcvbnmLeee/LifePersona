@@ -35,12 +35,16 @@ As you answer each question, your choices secretly build up towards one of our *
 
 ---
 
-## 📜 Credits
+<!--## 📜 Credits
 
 - Created with ❤️ by Janelle, Coco and Grey
 - Persona art & design by Grey
 - Scenario art & design flow by Janelle
 - Programming by [Coco](https://www.github.com/ZxcvbnmLeee) and [Janelle](https://www.github.com/JKOH097)
+-->
+## 📜 Acknowledgments
+
+A huge thank you to the contributors who wish to remain anonymous, but whose input was crucial to the success of this project.
 
 *Inspired by Singapore culture, personality quizzes and a passion to spread awareness of financial planning in a fun way.*
 
