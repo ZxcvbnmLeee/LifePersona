@@ -2,7 +2,7 @@ console.log("Script loaded!");
 
 // Your Apps Script Web App URL
 const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbyCu7P_RDUrwtMSX6CbbXBOkDuBnnKUFxIkJ7Ez7is-kEocfMVgG3XxegOrwGVuwdUx/exec";
+  "https://script.google.com/macros/s/AKfycbzdhSYHDfd6uPMO3w5gDArephLh7Awc3oeLhiGFQRtTAPl0lOWnET0jkqLTm4RjHarJ/exec";
 
 /* ---------- State Flags ---------- */
 let quizResultsSent = false;         // Prevent sending quiz results twice
@@ -407,10 +407,13 @@ function setupContactForm() {
     if (contactFormSent) return;
 
   const name = document.getElementById("user-name").value.trim();
-    const email = document.getElementById("user-email").value.trim();
-    const phone = document.getElementById("user-phone").value.trim();
-    const petTypeEl = document.querySelector('input[name="pet-type"]:checked');
-    const petType = petTypeEl ? petTypeEl.value : "";
+const email = document.getElementById("user-email").value.trim();
+const phone = document.getElementById("user-phone").value.trim();
+const petType = document.getElementById("pet-type").value;  
+console.log("Collected form values:", { name, email, phone, petType, resultType });
+console.log("Sending contact data:", {
+  name, email, phone, petType, resultType,
+  submissionType: "contact_form"});
 
   const submittedEmails = JSON.parse(localStorage.getItem("submittedEmails") || "[]");
   const submittedPhones = JSON.parse(localStorage.getItem("submittedPhones") || "[]");
@@ -448,7 +451,7 @@ function setupContactForm() {
 
     // Disable submit immediately to prevent multiple clicks
     contactFormSent = true;
-    const submitBtn = document.getElementById("contact-submit");
+    const submitBtn = document.getElementById("submit-contact");
     if (submitBtn) submitBtn.disabled = true;
 
     fetch(GOOGLE_SCRIPT_URL, {

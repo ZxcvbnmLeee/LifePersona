@@ -100,7 +100,7 @@
           Would you like to equip yourself with more financial knowledge and confidence?
         </h2>
       </div>
-      <form id="insurance-form" action="https://script.google.com/macros/s/AKfycbyA8x3ss2DdwW5Ws_I_pSxdHjkbGoPM8ZjMq0kmXEokeCp0ENH4CY3KO46DjAKzwf3G/exec" method="POST" style="display:flex; flex-direction:column; gap:15px; max-width:100%; margin:0 margin;">
+      <form id="insurance-form" action="https://script.google.com/macros/s/AKfycbzdhSYHDfd6uPMO3w5gDArephLh7Awc3oeLhiGFQRtTAPl0lOWnET0jkqLTm4RjHarJ/exec" method="POST" style="display:flex; flex-direction:column; gap:15px; max-width:100%; margin:0 margin;">
         <input type="hidden" name="resultType" id="resultType">
         <input type="text" id="user-name" name="name"
           placeholder="Your Name" required 
@@ -128,7 +128,7 @@
             color: #3b2921;
             z-index: 2;">+65</span>
           <input type="tel" id="user-phone"
-            placeholder="8123 4567"
+            placeholder="8123 4567" required
             pattern="[89][0-9]{7}"
             title="Please enter a valid 8-digit Singapore phone number"
             maxlength="8"
@@ -209,6 +209,25 @@
     });
    </script>
   <script src="script.js"></script>
+  <script>
+  document.getElementById("insurance-form").addEventListener("submit", function(e) {
+    // Ensure resultType is filled (if quiz logic didn’t set it yet)
+    if (!document.getElementById("resultType").value) {
+      document.getElementById("resultType").value = 
+        document.getElementById("result-type").innerText || "Not Calculated";
+    }
+
+    // Debug log to check values before submit
+    console.log("Submitting form with:", {
+      name: document.getElementById("user-name").value,
+      email: document.getElementById("user-email").value,
+      phone: document.getElementById("user-phone").value,
+      petType: document.getElementById("pet-type").value,
+      resultType: document.getElementById("resultType").value
+    });
+  });
+</script>
+
 </body>
   
 </html>
