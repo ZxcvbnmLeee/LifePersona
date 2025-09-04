@@ -19,9 +19,9 @@ function showPage(id) {
 
 /* ---------- QUIZ ---------- */
 let currentQuestionIndex = 0;
-let captainbackup1 = 0, whynotwanderer2 = 0, ultimatechillpill3 = 0;
-let thefunnomad4 = 0, detectivedata5 = 0, lifestrategist6 = 0;
-let walletwhisperer7 = 0, connectioncurator8 = 0;
+let thekiasuhero1 = 0, theyoloexplorer2 = 0, theshiokrelaxer3 = 0;
+let steadylahseeker4 = 0, chopchopanalyst5 = 0, thebigbrainboss6 = 0;
+let thehuatahsaver7 = 0, lobangking8 = 0;
 
 const questions = [
     // QUESTION 1
@@ -35,10 +35,10 @@ const questions = [
         "Panic for 2 mins, then decide",
       ],
       weights: [
-        { captainbackup1: +1, detectivedata5: +1 },
-        { connectioncurator8: +1, whynotwanderer2: +1 },
-        { whynotwanderer2: +1, ultimatechillpill3: +1 },
-        { thefunnomad4: +1, lifestrategist6: +1 },
+        { thekiasuhero1: +1, chopchopanalyst5: +1 },
+        { lobangking8: +1, theyoloexplorer2: +1 },
+        { theyoloexplorer2: +1, theshiokrelaxer3: +1 },
+        { steadylahseeker4: +1, thebigbrainboss6: +1 },
       ],
     },
     // QUESTION 2
@@ -51,10 +51,10 @@ const questions = [
         "The ability to eat carbs without guilt",
       ],
       weights: [
-        { captainbackup1: +1, walletwhisperer7: +1 },
-        { connectioncurator8: +1, ultimatechillpill3: +1 },
-        { lifestrategist6: +1, detectivedata5: +1 },
-        { thefunnomad4: +1, whynotwanderer2: +1 },
+        { thekiasuhero1: +1, thehuatahsaver7: +1 },
+        { lobangking8: +1, theshiokrelaxer3: +1 },
+        { thebigbrainboss6: +1, chopchopanalyst5: +1 },
+        { steadylahseeker4: +1, theyoloexplorer2: +1 },
       ],
     },
     // QUESTION 3
@@ -67,10 +67,10 @@ const questions = [
         "Pretend nothing happened",
       ],
       weights: [
-        { captainbackup1: +1, detectivedata5: +1 },
-        { connectioncurator8: +1, ultimatechillpill3: +1 },
-        { whynotwanderer2: +1, thefunnomad4: +1 },
-        { ultimatechillpill3: +1, walletwhisperer7: +1 },
+        { thekiasuhero1: +1, chopchopanalyst5: +1 },
+        { lobangking8: +1, theshiokrelaxer3: +1 },
+        { theyoloexplorer2: +1, steadylahseeker4: +1 },
+        { theshiokrelaxer3: +1, thehuatahsaver7: +1 },
       ],
     },
     // QUESTION 4
@@ -83,10 +83,10 @@ const questions = [
         "Extra time to enjoy life",
       ],
       weights: [
-        { captainbackup1: +1, lifestrategist6: +1 },
-        { thefunnomad4: +1, walletwhisperer7: +1 },
-        { ultimatechillpill3: +1, connectioncurator8: +1 },
-        { thefunnomad4: +1, whynotwanderer2: +1 },
+        { thekiasuhero1: +1, thebigbrainboss6: +1 },
+        { steadylahseeker4: +1, thehuatahsaver7: +1 },
+        { theshiokrelaxer3: +1, lobangking8: +1 },
+        { steadylahseeker4: +1, theyoloexplorer2: +1 },
       ],
     },
     // QUESTION 5
@@ -99,10 +99,10 @@ const questions = [
         "I close my eyes and hope for the best",
       ],
       weights: [
-        { captainbackup1: +1, walletwhisperer7: +1 },
-        { lifestrategist6: +1, ultimatechillpill3: +1 },
-        { whynotwanderer2: +1, thefunnomad4: +1 },
-        { thefunnomad4: +1, connectioncurator8: +1 },
+        { thekiasuhero1: +1, thehuatahsaver7: +1 },
+        { thebigbrainboss6: +1, theshiokrelaxer3: +1 },
+        { theyoloexplorer2: +1, steadylahseeker4: +1 },
+        { steadylahseeker4: +1, lobangking8: +1 },
       ],
     },
     // QUESTION 6 (show tip bubble)
@@ -115,10 +115,10 @@ const questions = [
         "I trust my own gut",
       ],
       weights: [
-        { detectivedata5: +1, whynotwanderer2: +1 },
-        { connectioncurator8: +1, ultimatechillpill3: +1 },
-        { lifestrategist6: +1, captainbackup1: +1 },
-        { thefunnomad4: +1, walletwhisperer7: +1 },
+        { chopchopanalyst5: +1, theyoloexplorer2: +1 },
+        { lobangking8: +1, theshiokrelaxer3: +1 },
+        { thebigbrainboss6: +1, thekiasuhero1: +1 },
+        { steadylahseeker4: +1, thehuatahsaver7: +1 },
       ],
     },
     // QUESTION 7
@@ -132,10 +132,10 @@ const questions = [
         "Hope the storm skips my area",
       ],
       weights: [
-        { captainbackup1: +1, walletwhisperer7: +1 },
-        { detectivedata5: +1, lifestrategist6: +1 },
-        { ultimatechillpill3: +1, connectioncurator8: +1 },
-        { thefunnomad4: +1, whynotwanderer2: +1 },
+        { thekiasuhero1: +1, thehuatahsaver7: +1 },
+        { chopchopanalyst5: +1, thebigbrainboss6: +1 },
+        { theshiokrelaxer3: +1, lobangking8: +1 },
+        { steadylahseeker4: +1, theyoloexplorer2: +1 },
       ],
     },
     // QUESTION 8 (show fact bubble)
@@ -149,10 +149,10 @@ const questions = [
         "My phone/photos",
       ],
       weights: [
-        { captainbackup1: +1, detectivedata5: +1 },
-        { walletwhisperer7: +1, ultimatechillpill3: +1 },
-        { connectioncurator8: +1, thefunnomad4: +1 },
-        { thefunnomad4: +1, whynotwanderer2: +1 },
+        { thekiasuhero1: +1, chopchopanalyst5: +1 },
+        { thehuatahsaver7: +1, theshiokrelaxer3: +1 },
+        { lobangking8: +1, steadylahseeker4: +1 },
+        { steadylahseeker4: +1, theyoloexplorer2: +1 },
       ],
     },
     // QUESTION 9
@@ -166,10 +166,10 @@ const questions = [
         "Only if it's short and fun",
       ],
       weights: [
-        { captainbackup1: +1, detectivedata5: +1 },
-        { lifestrategist6: +1, walletwhisperer7: +1 },
-        { ultimatechillpill3: +1, whynotwanderer2: +1 },
-        { thefunnomad4: +1, connectioncurator8: +1 },
+        { thekiasuhero1: +1, chopchopanalyst5: +1 },
+        { thebigbrainboss6: +1, thehuatahsaver7: +1 },
+        { theshiokrelaxer3: +1, theyoloexplorer2: +1 },
+        { steadylahseeker4: +1, lobangking8: +1 },
       ],
     },
     // QUESTION 10 (tip bubble)
@@ -182,10 +182,10 @@ const questions = [
         "Treating myself (Buying dessert with no regrets)",
       ],
       weights: [
-        { captainbackup1: +1, lifestrategist6: +1 },
-        { whynotwanderer2: +1, thefunnomad4: +1 },
-        { connectioncurator8: +1, ultimatechillpill3: +1 },
-        { thefunnomad4: +1, walletwhisperer7: +1 },
+        { thekiasuhero1: +1, thebigbrainboss6: +1 },
+        { theyoloexplorer2: +1, steadylahseeker4: +1 },
+        { lobangking8: +1, theshiokrelaxer3: +1 },
+        { steadylahseeker4: +1, thehuatahsaver7: +1 },
       ],
     },
   ];
@@ -195,9 +195,9 @@ function startQuiz() {
 
   // Reset scores & state
   currentQuestionIndex = 0;
-  captainbackup1 = whynotwanderer2 = ultimatechillpill3 = 0;
-  thefunnomad4 = detectivedata5 = lifestrategist6 = 0;
-  walletwhisperer7 = connectioncurator8 = 0;
+  thekiasuhero1 = theyoloexplorer2 = theshiokrelaxer3 = 0;
+  steadylahseeker4 = chopchopanalyst5 = thebigbrainboss6 = 0;
+  thehuatahsaver7 = lobangking8 = 0;
   quizResultsSent = false;
   resultType = "";
 
@@ -260,14 +260,14 @@ function handleChoiceClick(choiceIndex) {
   const w = q.weights[choiceIndex] || {};
   // console.log("Selected choice weight:", w); 
 
-  captainbackup1 += w.captainbackup1 || 0;
-  whynotwanderer2 += w.whynotwanderer2 || 0;
-  ultimatechillpill3 += w.ultimatechillpill3 || 0;
-  thefunnomad4 += w.thefunnomad4 || 0;
-  detectivedata5 += w.detectivedata5 || 0;
-  lifestrategist6 += w.lifestrategist6 || 0;
-  walletwhisperer7 += w.walletwhisperer7 || 0;
-  connectioncurator8 += w.connectioncurator8 || 0;
+  thekiasuhero1 += w.thekiasuhero1 || 0;
+  theyoloexplorer2 += w.theyoloexplorer2 || 0;
+  theshiokrelaxer3 += w.theshiokrelaxer3 || 0;
+  steadylahseeker4 += w.steadylahseeker4 || 0;
+  chopchopanalyst5 += w.chopchopanalyst5 || 0;
+  thebigbrainboss6 += w.thebigbrainboss6 || 0;
+  thehuatahsaver7 += w.thehuatahsaver7 || 0;
+  lobangking8 += w.lobangking8 || 0;
 
   currentQuestionIndex++;
   addTipsHereIfAny(currentQuestionIndex);
@@ -318,14 +318,14 @@ function calculateAndDisplayResult() {
   console.log("Calculating result…");
 
   const scores = {
-    captainbackup1,
-    whynotwanderer2,
-    ultimatechillpill3,
-    thefunnomad4,
-    detectivedata5,
-    lifestrategist6,
-    walletwhisperer7,
-    connectioncurator8,
+    thekiasuhero1,
+    theyoloexplorer2,
+    theshiokrelaxer3,
+    steadylahseeker4,
+    chopchopanalyst5,
+    thebigbrainboss6,
+    thehuatahsaver7,
+    lobangking8,
   };
 
   let topPersona = null;
@@ -338,19 +338,19 @@ function calculateAndDisplayResult() {
   }
 
   const personaMap = {
-    captainbackup1: { image: "R1.png", type: "Captain Backup" },
-    whynotwanderer2: { image: "R2.png", type: "The Why-Not Wanderer" },
-    ultimatechillpill3: { image: "R3.png", type: "The Chill Pill" },
-    thefunnomad4: { image: "R4.png", type: "The Fun Nomad" },
-    detectivedata5: { image: "R5.png", type: "Detective Data" },
-    lifestrategist6: { image: "R6.png", type: "The Life Strategist" },
-    walletwhisperer7: { image: "R7.png", type: "Wallet Whisperer" },
-    connectioncurator8: { image: "R8.png", type: "The Connection Curator" },
+    thekiasuhero1: { image: "R1.png", type: "The Kiasu Hero" },
+    theyoloexplorer2: { image: "R2.png", type: "The YOLO Explorer Wanderer" },
+    theshiokrelaxer3: { image: "R3.png", type: "The Shiok Relaxer" },
+    steadylahseeker4: { image: "R4.png", type: "Steady Lah Seeker" },
+    chopchopanalyst5: { image: "R5.png", type: "Chop Chop Analyst" },
+    thebigbrainboss6: { image: "R6.png", type: "The Big Brain Boss" },
+    thehuatahsaver7: { image: "R7.png", type: "The Huat Ah Saver" },
+    lobangking8: { image: "R8.png", type: "Lobang King" },
   };
 
   const { image, type } = personaMap[topPersona] || {
     image: "R1.png",
-    type: "Captain Backup",
+    type: "The Kiasu Hero",
   };
   resultType = type;
 
@@ -373,14 +373,14 @@ function calculateAndDisplayResult() {
 function sendQuizResults() {
   const form = new FormData();
   form.append("resultType", resultType);
-  form.append("captainbackup1", captainbackup1);
-  form.append("whynotwanderer2", whynotwanderer2);
-  form.append("ultimatechillpill3", ultimatechillpill3);
-  form.append("thefunnomad4", thefunnomad4);
-  form.append("detectivedata5", detectivedata5);
-  form.append("lifestrategist6", lifestrategist6);
-  form.append("walletwhisperer7", walletwhisperer7);
-  form.append("connectioncurator8", connectioncurator8);
+  form.append("thekiasuhero1", thekiasuhero1);
+  form.append("theyoloexplorer2", theyoloexplorer2);
+  form.append("theshiokrelaxer3", theshiokrelaxer3);
+  form.append("steadylahseeker4", steadylahseeker4);
+  form.append("chopchopanalyst5", chopchopanalyst5);
+  form.append("thebigbrainboss6", thebigbrainboss6);
+  form.append("thehuatahsaver7", thehuatahsaver7);
+  form.append("lobangking8", lobangking8);
   form.append("submissionType", "quiz_results_only");
   form.append("interestedInInsurance", "false");
   form.append("timestamp", new Date().toISOString());
@@ -435,14 +435,14 @@ console.log("Sending contact data:", {
       phone,
       petType,              // send pet type too
       resultType,
-      captainbackup1,
-      whynotwanderer2,
-      ultimatechillpill3,
-      thefunnomad4,
-      detectivedata5,
-      lifestrategist6,
-      walletwhisperer7,
-      connectioncurator8,
+      thekiasuhero1,
+      theyoloexplorer2,
+      theshiokrelaxer3,
+      steadylahseeker4,
+      chopchopanalyst5,
+      thebigbrainboss6,
+      thehuatahsaver7,
+      lobangking8,
       submissionType: "contact_form",
       interestedInInsurance: "true",
       contactedYet: "false",
@@ -533,3 +533,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
