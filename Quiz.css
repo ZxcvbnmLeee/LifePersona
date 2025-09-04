@@ -64,7 +64,7 @@ h1 {
     color: #333;
     font-weight: 800;
     text-align: left;
-   /* max-width: 100%; /* use full width */
+    max-width: 100%; /* use full width */
     margin: 0; margin-bottom: 16px;
     line-height: 1.1; /* tighter line height for better visual balance */
 }
@@ -443,4 +443,5 @@ body.quiz-background {
     padding: 10px;
   }
 }
+
 
