@@ -2,7 +2,7 @@ console.log("Script loaded!");
 
 // Your Apps Script Web App URL
 const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzdhSYHDfd6uPMO3w5gDArephLh7Awc3oeLhiGFQRtTAPl0lOWnET0jkqLTm4RjHarJ/exec";
+  "https://script.google.com/macros/s/AKfycbzCxd_mZfg7Xzqj01RBaz5IpVFx9F_lNn0CP1ZyymDqNcZgBIcaAmchiTFGHIyytFBz/exec";
 
 /* ---------- State Flags ---------- */
 let quizResultsSent = false;         // Prevent sending quiz results twice
@@ -533,4 +533,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
