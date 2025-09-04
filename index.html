@@ -85,32 +85,27 @@
     <div id="tip-box" style="display:none;" class="tip-box"></div>
 
     <!-- CONTACT FORM PAGE -->
-    <div id="contact-page" style = "display:none; overflow-y:auto; max-height:100vh; scrollbar-width:none; -ms-overflow-style:none;">
-     <h1>Let's chat about your money goals- no pressure, just a real conversation. </h1> 
-      <div style="text-align: center; margin-bottom: 30px">
-        <h2 style="font-size: 16px; margin-bottom: 16px; line-height: 1.4">
-          Hi there! We're a financial team passionate about helping Singaporeans make smarter money choices with confidence.
-          Your money style, your journey—let’s keep it real. No pressure, no obligation, just real conversations.
-        </h2>
-        <!-- <h2 style="font-size:14px; margin-bottom:16px; line-height:1.4; color:#333;">
-          Many people don’t realize your money style can shape your journey, we believe financial literacy should be simple, not scary. No pressure, no obligation, just real conversations.
-        </h2> -->
-        <h2 style="font-size: 16px; margin-bottom: 20px; font-weight: 600">
-          Want practical tips to grow your financial confidence? Sign up here.
-        </h2>
+    <div id="contact-page" style = "display:none; overflow-y:auto; max-height:100vh; scrollbar-width:none; -ms-overflow-style:none; padding: 0px 15px;">
+      <!-- Header image -->
+      <div style="text-align: center; margin-bottom: 15px;">
+        <img src="./images/contactpg.png" style="width: 100%; max-width: 700px; height: auto; object-fit: fill;">
       </div>
-      <form id="insurance-form" action="https://script.google.com/macros/s/AKfycbzCxd_mZfg7Xzqj01RBaz5IpVFx9F_lNn0CP1ZyymDqNcZgBIcaAmchiTFGHIyytFBz/exec" method="POST" style="display:flex; flex-direction:column; gap:15px; max-width:100%; margin:0 margin;">
+
+      <form id="insurance-form" action="https://script.google.com/macros/s/AKfycbzCxd_mZfg7Xzqj01RBaz5IpVFx9F_lNn0CP1ZyymDqNcZgBIcaAmchiTFGHIyytFBz/exec" method="POST" 
+        style="display:flex; flex-direction:column; gap:15px; max-width:100%; margin:0;">
         <input type="hidden" name="resultType" id="resultType">
+        
         <input type="text" id="user-name" name="name"
-          placeholder="Your Name" required 
+          placeholder="What should we call you?" required 
           style="padding: 12px; 
             border: 2px solid #ffd989; border-radius: 25px; 
             font-family: 'Gloria Hallelujah', cursive; font-size: 14px;
             text-align: center;
             width: 100%;
             box-sizing: border-box;">
+        
         <input type="email" id="user-email"
-          placeholder="Your email" required
+          placeholder="What's your email?" required
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           title="Please enter a valid email address"
           style="padding: 12px;
@@ -119,6 +114,7 @@
             text-align: center;
             width: 100%;
             box-sizing: border-box;">
+        
         <div style="position: relative; width: 100%">
           <span style="position: absolute; left:15px; top:50%;
             transform: translateY(-50%);
@@ -127,7 +123,7 @@
             color: #3b2921;
             z-index: 2;">+65</span>
           <input type="tel" id="user-phone"
-            placeholder="8123 4567" required
+            placeholder="What's your phone number?" 
             pattern="[89][0-9]{7}"
             title="Please enter a valid 8-digit Singapore phone number"
             maxlength="8"
@@ -137,8 +133,9 @@
               text-align: center;
               width: 100%;
               box-sizing: border-box;"
-            oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
         </div>
+        
         <select id="pet-type" name="petType" required
           style=" padding: 12px;
             border: 2px solid #ffd989; border-radius: 25px;
@@ -147,12 +144,13 @@
             background-color: white;
             width: 100%; 
             box-sizing: border-box;"> 
-          <option value ="" disabled selected hidden> interest </option>
+          <option value ="" disabled selected hidden> What's your interest? </option>
           <option value="Literacy">I want to gain more financial literacy</option>
           <option value="Insurance">I want to get insurance advice</option>
           <option value="Wealth">I want to learn more about investment strategies</option>
           <option value="Enquiry">I have other financial concerns I would like to consult</option>
         </select>
+        
         <button type="submit" id="submit-contact"
           style="padding: 12px;
             background-color: #ffd989;
@@ -161,8 +159,24 @@
             color: #3b2921;
             cursor: pointer;
             width: 100%;
-            box-sizing: border-box;">Yes, please reach out!</button>
+            box-sizing: border-box;">Let's chat ✨</button>
       </form>
+      
+      <p style="text-align: center; font-family: 'Gloria Hallelujah', cursive; color: #7f8c8d; font-size: 12px; margin: 15px 0;">
+        We'll reach out to schedule a short, no-pressure chat.
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; gap: 6px; font-family: 'Gloria Hallelujah', cursive; font-size: 12px; color: #5a6c7d;">
+          <div style="width: 16px; height: 16px; background: #7f8c8d; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 10px;">🔒</div>
+          <span>Your info stays private.</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px; font-family: 'Gloria Hallelujah', cursive; font-size: 12px; color: #5a6c7d;">
+          <div style="width: 16px; height: 16px; background: #27ae60; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 10px;">✓</div>
+          <span>No spam, No Obligation.</span>
+        </div>
+      </div>
+
       <div id="form-message" style="margin-top: 15px; font-size: 14px"></div>
       
       <!-- Skip Option -->
