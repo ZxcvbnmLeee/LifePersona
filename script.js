@@ -143,10 +143,10 @@ const questions = [
       question:
         "You have to grab one thing in an emergency. Which do you choose?",
       choices: [
-        "Important documents",
-        "My emergency snack bag",
+        "Important documents (passport, ID, certificates)",
+        "My emergency snack bag (energy (and comfort) to survive)",
         "My favourite keepsake (My lucky souvenir)",
-        "My phone/photos",
+        "My phone (my lifeline for calls, banking, and important docs)",
       ],
       weights: [
         { thekiasuhero1: +1, chopchopanalyst5: +1 },
@@ -533,6 +533,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
 
