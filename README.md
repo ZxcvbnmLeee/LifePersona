@@ -20,14 +20,14 @@ Adulting is already stressful enough, so why not make it shiok?
 
 1. Click **Start**.
 2. Choose answers that feel the most "you."
-3. Watch your anime persona appear!
+3. Watch your life persona appear!
 4. Share your result link or screenshot.
 
 ---
 
 ## 🧠 The Scoring System (and a little disclaimer!)
 
-As you answer each question, your choices secretly build up towards one of our **8 unique Personas** — from the strategic **Captain Backup** to the free-spirited **Fun Nomad**.  
+As you answer each question, your choices secretly build up towards one of our **8 unique Personas** — from the strategic **The Kiasu Hero** to the free-spirited **Steady Lah Seeker**.  
 
 > ⚠️ **Disclaimer:**  
 > This quiz is **just for fun** and not based on any scientific personality model.  
