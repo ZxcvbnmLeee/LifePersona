@@ -440,6 +440,74 @@ body.quiz-background {
   color: #333;
 }
 
+/*==========================*/
+/* CONTACT FORM - telephone */
+/*==========================*/
+.contact-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.icon-selector {
+  position: absolute;
+  transform-origin: center center; /* NEW: expand from center */
+  cursor: pointer;
+  z-index: 3;
+  width: 55px; height: 55px;   /* NEW */
+  border: 2px solid #ffd989; /* NEW */
+  border-radius: 50%;        /* NEW */
+  display: flex;             /* NEW */
+  align-items: center;       /* NEW */
+  justify-content: center;   /* NEW */
+  background: #fff;          /* NEW */
+  font-size: 18px;           /* NEW */
+  transition: background 0.2s, transform 0.2s; /* NEW */
+}
+
+.icon-selector:hover { 
+  background: #fff6e0;
+  transform: scale(1.05);
+}
+
+.icon-options {
+  position: absolute;
+  left: 10px;
+  top: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  padding: 5px;
+  z-index: 4;
+}
+
+.icon-options span {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.icon-options span:hover {
+  background: #f0f0f0;
+}
+
+#user-phone {
+  padding: 12px 45px 12px 55px;
+  border: 2px solid #ffd989;
+  border-radius: 25px;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.invalid {
+  border: 2px solid red !important;
+  background-color: #ffeaea;
+}
+
+
 /*============================================*/
 /* Responsive adjustments for form and mobile */
 /*============================================*/
