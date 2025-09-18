@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
   <title>Life Test</title>
   <link rel="stylesheet" href="Quiz.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
   <script>
     if (window.top !== window.self) {
@@ -115,27 +117,114 @@
             width: 100%;
             box-sizing: border-box;">
         
-        <div style="position: relative; width: 100%">
-          <span style="position: absolute; left:15px; top:50%;
-            transform: translateY(-50%);
-            font-family: 'Gloria Hallelujah', cursive;
-            font-size: 14px;
-            color: #3b2921;
-            z-index: 2;">+65</span>
+        <!-- EDIT -->
+        <div class="contact-wrapper">
+          <!-- Icon Selector -->
+          <div class="icon-selector" id="selected-icon">📞+65</div>
+          <div class="icon-options" id="icon-options">
+            <span data-type="call">📞+65</span>
+            <span data-type="telegram"><i class="fa-brands fa-telegram"></i> @</span>
+            <span data-type="linkedin"><i class="fa-brands fa-linkedin"></i> 🔗</span>
+          </div>
+
+          <!-- Input -->
           <input type="tel" id="user-phone"
-            placeholder="What's your phone number?" 
+            placeholder="What's your phone number?"
             pattern="[89][0-9]{7}"
-            title="Please enter a valid 8-digit Singapore phone number"
             maxlength="8"
-            style="padding: 12px 45px 12px 45px;
-              border: 2px solid #ffd989; border-radius: 25px;
-              font-family: 'Gloria Hallelujah', cursive; font-size: 14px;
-              text-align: center;
-              width: 100%;
-              box-sizing: border-box;"
+            inputmode="numeric"
             oninput="this.value = this.value.replace(/[^0-9]/g, '')">
         </div>
-        
+
+        <script>
+          const selectedIcon = document.getElementById("selected-icon");
+          const iconOptions = document.getElementById("icon-options");
+          const inputField = document.getElementById("user-phone");
+
+          let currentType = "call"; // default
+
+          // Toggle dropdown
+          selectedIcon.addEventListener("click", () => {
+            iconOptions.style.display = iconOptions.style.display === "flex" ? "none" : "flex";
+          });
+
+          // Handle selection
+          iconOptions.addEventListener("click", (e) => {
+            const option = e.target.closest("span"); // ensure we catch <i> clicks too
+            if (option && option.dataset.type) {
+              currentType = option.dataset.type;
+              selectedIcon.innerHTML = option.innerHTML; // preserve icons
+              iconOptions.style.display = "none";
+
+              if (currentType === "telegram") {
+                inputField.type = "text";
+                inputField.placeholder = "What's your Tele @?";
+                inputField.setAttribute("pattern", "^@[A-Za-z0-9_]{3,}$"); 
+                inputField.removeAttribute("maxlength");
+                inputField.oninput = null;
+              } else if (currentType === "linkedin") {
+                inputField.type = "text"; // use text instead of url
+                inputField.placeholder = "Paste your LinkedIn profile link";
+                inputField.setAttribute("pattern", "^(https:\\/\\/)?(www\\.)?linkedin\\.com\\/in\\/[A-Za-z0-9_-]+\\/?$");
+                inputField.removeAttribute("maxlength");
+                inputField.oninput = null;
+              } else {
+                inputField.type = "tel";
+                inputField.placeholder = "What's your phone number?";
+                inputField.setAttribute("pattern", "[89][0-9]{7}");
+                inputField.setAttribute("maxlength", "8");
+                inputField.oninput = function() {
+                  this.value = this.value.replace(/[^0-9]/g, '');
+                };
+              }
+            }
+          });
+          // Validation on blur, so that it auto checks whether its valid without submission
+          inputField.addEventListener("blur", () => {
+            let isValid = true;
+            if (currentType === "telegram") {
+              const regex = /^@[A-Za-z0-9_]{3,}$/;
+              if (!regex.test(inputField.value.trim())) {
+                inputField.setCustomValidity("Telegram handle must start with @ and have at least 3 characters.");
+                isValid = false;
+              } else {
+                inputField.setCustomValidity("");
+              }
+            } else if (currentType === "linkedin") {
+              const regex = /^(https:\/\/)?(www\.)?linkedin\.com\/in\/[A-Za-z0-9_-]+\/?$/;
+              if (!regex.test(inputField.value.trim())) {
+                inputField.setCustomValidity("Please enter a valid LinkedIn profile link (e.g. www.linkedin.com/in/your-name).");
+                isValid = false;
+              } else {
+                inputField.setCustomValidity("");
+              }
+            } else {
+              // phone/whatsapp validation (browser will handle pattern)
+              if (!inputField.checkValidity()) {
+                inputField.setCustomValidity("Please enter a valid 8-digit Singapore number starting with 8 or 9.");
+                isValid = false;
+              } else {
+                inputField.setCustomValidity("");
+              }
+            }
+
+            // Apply or remove red border
+            if (!isValid) {
+              inputField.classList.add("invalid");
+            } else {
+              inputField.classList.remove("invalid");
+            }
+          });
+          // Remove red instantly on typing
+          inputField.addEventListener("input", () => {
+            inputField.classList.remove("invalid");
+            inputField.setCustomValidity("");
+          });
+
+        </script>
+
+        <!-- END OF EDIT -->
+
         <select id="pet-type" name="petType" required
           style=" padding: 12px;
             border: 2px solid #ffd989; border-radius: 25px;
