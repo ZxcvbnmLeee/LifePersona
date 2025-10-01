@@ -206,16 +206,16 @@ function startQuiz() {
 
 function displayQuestionImage(questionIndex) {
   const imageURLs = [
-    "./images/1_planner.png",
-    "./images/2_security.png",
-    "./images/3_life.png",
-    "./images/4_magic.png",
-    "./images/5_spending.png",
-    "./images/6_advice.png",
-    "./images/7_storm.png",
-    "./images/8_emergency.png",
-    "./images/9_future.png",
-    "./images/10_happiness.png",
+    "./images/1_hawker.png",
+    "./images/2_home.png",
+    "./images/3_curveball.png",
+    "./images/4_shiok.png",
+    "./images/5_payday.png",
+    "./images/6_emergency.png",
+    "./images/7_stress.png",
+    "./images/8_motivation.png",
+    "./images/9_approach.png",
+    "./images/10_choice.png",
   ];
   const el = document.getElementById("question-image");
   if (el) el.src = imageURLs[questionIndex] || "";
@@ -533,6 +533,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
 
