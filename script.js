@@ -395,7 +395,7 @@ function addTipsHereIfAny(currentQuestionIndex){
     if (currentQnNumber === 5+1){
         showTip("Quick tip: <br>People who track their spending even casually end up with more freedom for fun stuff!<br><br>* click anywhere to dismiss *");
     } else if (currentQnNumber === 7+1){
-        showTip("Did you know?<br>Nearly 50% of Singaporeans lack sufficient emergency savings...<br>Are you prepared?")
+        showTip("Did you know?<br>Nearly 50% of Singaporeans lack sufficient emergency savings...<br>Are you one of them?")
     } else if (currentQnNumber === 9+1){
         showTip("Little secret:<br>Most future problems are solved by just being curious enough to ask.")
     } else if (currentQnNumber === 12+1){
@@ -696,5 +696,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
