@@ -417,7 +417,7 @@ body.quiz-background {
 .quiz-page,
 #contact-page,
 #result-page {
-  padding-bottom: 40px;
+  padding: 40px 0px;  /* top & bottom paddings are 40px, L&R are 0px */
 }
 
 /* Result content styling */
@@ -532,5 +532,6 @@ body.quiz-background {
     padding: 10px;
   }
 }
+
 
 
