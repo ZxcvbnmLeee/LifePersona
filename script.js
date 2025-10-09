@@ -24,168 +24,279 @@ let steadylahseeker4 = 0, chopchopanalyst5 = 0, thebigbrainboss6 = 0;
 let thehuatahsaver7 = 0, lobangking8 = 0;
 
 const questions = [
+    // STORY 1 - currentQuestionIndex = 0
+    {
+      question:
+        "",
+      choices: ["→"],
+      weights: [{}],
+    },
     // QUESTION 1
     {
       question:
-        "You've been planning a project for months, but an unexpected change forces you to alter your plan. What will you do next?",
+        "You’re at a hawker centre, and your favourite stall has a super long queue. What do you do?",
       choices: [
-        "Make a backup plan on the spot",
-        "Call someone I trust",
-        "Go with the flow",
-        "Panic for 2 mins, then decide",
+        "Queue patiently, worth it.",
+        "Skip the queue, try something else new!",
+        "Grab whatever’s fastest; no time to waste.",
+        "Ask your friend what they feel like eating, then go along with that.",
       ],
       weights: [
-        { thekiasuhero1: +1, chopchopanalyst5: +1 },
-        { lobangking8: +1, theyoloexplorer2: +1 },
-        { theyoloexplorer2: +1, theshiokrelaxer3: +1 },
-        { steadylahseeker4: +1, thebigbrainboss6: +1 },
+        { thekiasuhero1: +1 },
+        { theyoloexplorer2: +1 },
+        { chopchopanalyst5: +1 },
+        { steadylahseeker4: +1 },
       ],
+    },
+    // STORY 2 - currentQuestionIndex = 2
+    {
+      question: "",
+      choices: ["→"],
+      weights: [{}],
     },
     // QUESTION 2
     {
-      question: "Which one feels most like 'security' to you?",
+      question: "Long weekend is coming. What’s your plan?",
       choices: [
-        "A big fat savings account",
-        "Friends who pick me up (and feed me)",
-        "A life plan that looks like IKEA instructions",
-        "The ability to eat carbs without guilt",
+        "Restock, clean, get organised",
+        "Book last-minute trip, why not",
+        "Chill at home, binge shows, nap",
+        "Gather friends/family for makan",
       ],
       weights: [
-        { thekiasuhero1: +1, thehuatahsaver7: +1 },
-        { lobangking8: +1, theshiokrelaxer3: +1 },
-        { thebigbrainboss6: +1, chopchopanalyst5: +1 },
-        { steadylahseeker4: +1, theyoloexplorer2: +1 },
+        { thebigbrainboss6: +1 },
+        { theyoloexplorer2: +1 },
+        { theshiokrelaxer3: +1 },
+        { lobangking8: +1 },
       ],
+    },
+    // STORY 3 - currentQuestionIndex = 4
+    {
+      question: "",
+      choices: ["Being adaptable isn’t just surviving the chaos, it’s learning to dance with it. Your money habits often move to the same beat."],
+      weights: [{}],
     },
     // QUESTION 3
     {
-      question: "Life throws you a plot twist. What's your first reaction?",
+      question: "You’ve been planning a big outing, but a surprise curveball changes your plans. What’s your move?",
       choices: [
-        "Open 47 browser tabs (Google is my friend)",
-        "Mum... you free?",
-        "Eh, I'll freestyle it",
-        "Pretend nothing happened",
+        "Double down and prepare harder",
+        "Take it as an adventure and adapt",
+        "Stay calm — don’t overcomplicate things",
+        "Trust that I’ll land on my feet, one way or another",
       ],
       weights: [
-        { thekiasuhero1: +1, chopchopanalyst5: +1 },
-        { lobangking8: +1, theshiokrelaxer3: +1 },
-        { theyoloexplorer2: +1, steadylahseeker4: +1 },
-        { theshiokrelaxer3: +1, thehuatahsaver7: +1 },
+        { thekiasuhero1: +1 },
+        { theyoloexplorer2: +1 },
+        { steadylahseeker4: +1 },
+        { theshiokrelaxer3: +1 },
       ],
+    },
+    // STORY 4 - currentQuestionIndex = 6
+    {
+      question:
+        "",
+      choices: ["“Enjoy the little things in life, for one day you may look back and realize they were the big things.” – Robert Brault"],
+      weights: [{}],
     },
     // QUESTION 4
     {
-      question: "If you could pick ONE magic life power, what would you pick?",
+      question: "Which of these moments feels most shiok to you?",
       choices: [
-        "100% healthy forever",
-        "Infinite money (bye adulting)",
-        "Calm mode unlocked",
-        "Extra time to enjoy life",
+        "Finding a discount or freebie",
+        "Seeing my investments or savings grow",
+        "Finishing a to-do list efficiently",
+        "Having nothing planned, just chill time",
       ],
       weights: [
-        { thekiasuhero1: +1, thebigbrainboss6: +1 },
-        { steadylahseeker4: +1, thehuatahsaver7: +1 },
-        { theshiokrelaxer3: +1, lobangking8: +1 },
-        { steadylahseeker4: +1, theyoloexplorer2: +1 },
+        { lobangking8: +1 },
+        { thebigbrainboss6: +0.5, thehuatahsaver7: +0.5 },
+        { chopchopanalyst5: +1 },
+        { theshiokrelaxer3: +1 },
       ],
     },
-    // QUESTION 5
-    {
-      question: "Your monthly spending style looks like...",
-      choices: [
-        "Only what's necessary",
-        "Balanced spender (snacks + savings)",
-        "Big spender on experiences",
-        "I close my eyes and hope for the best",
-      ],
-      weights: [
-        { thekiasuhero1: +1, thehuatahsaver7: +1 },
-        { thebigbrainboss6: +1, theshiokrelaxer3: +1 },
-        { theyoloexplorer2: +1, steadylahseeker4: +1 },
-        { steadylahseeker4: +1, lobangking8: +1 },
-      ],
-    },
-    // QUESTION 6 (show tip bubble)
-    {
-      question: "Whose advice do you trust most?",
-      choices: [
-        "A famous person on a TED Talk",
-        "Family and friends",
-        "Someone who shows clear proof",
-        "I trust my own gut",
-      ],
-      weights: [
-        { chopchopanalyst5: +1, theyoloexplorer2: +1 },
-        { lobangking8: +1, theshiokrelaxer3: +1 },
-        { thebigbrainboss6: +1, thekiasuhero1: +1 },
-        { steadylahseeker4: +1, thehuatahsaver7: +1 },
-      ],
-    },
-    // QUESTION 7
+    // STORY 5 - currentQuestionIndex = 8
     {
       question:
-        "If life was a weather forecast, what do you do before the storm?",
+        "",
+      choices: ["“A budget is telling your money where to go instead of wondering where it went.” – Dave Ramsey"],
+      weights: [{}],
+    },
+    // QUESTION 5 (show tip bubble after this)
+    {
+      question: "It's payday! How do you usually spend?",
       choices: [
-        "Stock up & prepare like a survival drama hero",
-        "Watch the news and wait",
-        "Just stay home and chill",
-        "Hope the storm skips my area",
+        "Save aggressively and don’t spend unless necessary",
+        "Look for deals, hacks, and discounts everywhere",
+        "Make calculated choices and optimise every dollar",
+        "Invest, grow, and aim for the big picture",
       ],
       weights: [
-        { thekiasuhero1: +1, thehuatahsaver7: +1 },
-        { chopchopanalyst5: +1, thebigbrainboss6: +1 },
-        { theshiokrelaxer3: +1, lobangking8: +1 },
-        { steadylahseeker4: +1, theyoloexplorer2: +1 },
+        { thehuatahsaver7: +1 },
+        { thebigbrainboss6: +1 },
+        { steadylahseeker4: +1 },
+        { lobangking8: +1 },
       ],
     },
-    // QUESTION 8 (show fact bubble)
+    // STORY 6 - currentQuestionIndex = 10
     {
       question:
-        "You have to grab one thing in an emergency. Which do you choose?",
+        "",
+      choices: ["Emergencies don’t send invites — same with surprise expenses. Are you prepared?"],
+      weights: [{}],
+    },
+    // QUESTION 6
+    {
+      question: "You have to grab one thing in an emergency. What do you choose?",
       choices: [
-        "Important documents (passport, ID, certificates)",
-        "My emergency snack bag (energy (and comfort) to survive)",
-        "My favourite keepsake (My lucky souvenir)",
-        "My phone (my lifeline for calls, banking, and important docs)",
+        "Important documents (passport, IC, certs)",
+        "Snacks / water (cannot survive hungry)",
+        "Family photos / mementos.",
+        "Phone — lifeline for everything",
       ],
       weights: [
-        { thekiasuhero1: +1, chopchopanalyst5: +1 },
-        { thehuatahsaver7: +1, theshiokrelaxer3: +1 },
-        { lobangking8: +1, steadylahseeker4: +1 },
-        { steadylahseeker4: +1, theyoloexplorer2: +1 },
+        { thekiasuhero1: +1 },
+        { thehuatahsaver7: +1 },
+        { lobangking8: +1 },
+        { steadylahseeker4: +1 },
       ],
     },
-    // QUESTION 9
+    // STORY 7 - currentQuestionIndex = 12
     {
       question:
-        "A wise merlion says: 'I can give you tips for a smoother future!' You... ",
+        "",
+      choices: ["Stress reveals patterns, not weakness. How you cope matters more than how you crash."],
+      weights: [{}],
+    },
+    // QUESTION 7 (show fact bubble after Qn)
+    {
+      question: "When life gets stressful, what do you do?",
       choices: [
-        "Say 'Yes! Tell me more!'",
-        "Ask 'What's the catch?'",
-        "Smile and say no",
-        "Only if it's short and fun",
+        "Make a detailed plan and tackle things systematically",
+        "Find a way to relax and recharge first",
+        "Push harder, I can’t afford to lose out!",
+        "Remind myself not everything needs to be perfect",
       ],
       weights: [
-        { thekiasuhero1: +1, chopchopanalyst5: +1 },
-        { thebigbrainboss6: +1, thehuatahsaver7: +1 },
-        { theshiokrelaxer3: +1, theyoloexplorer2: +1 },
-        { steadylahseeker4: +1, lobangking8: +1 },
+        { chopchopanalyst5: +1 },
+        { theshiokrelaxer3: +1 },
+        { thekiasuhero1: +1 },
+        { steadylahseeker4: +1 },
       ],
     },
-    // QUESTION 10 (tip bubble)
+    // STORY 8 - currentQuestionIndex = 14
     {
-      question: "What makes you feel happiest at the end of the day?",
+      question:
+        "",
+      choices: ["Everyone has a “why” — and that “why” is usually what you’re really saving for"],
+      weights: [{}],
+    },
+    // QUESTION 8 
+    {
+      question: "What keeps you going in life?",
       choices: [
-        "Knowing I’ve planned for chaos",
-        "Trying something new",
-        "Time with people I care about",
-        "Treating myself (Buying dessert with no regrets)",
+        "Knowing I’m secure and stable",
+        "Being the best or ahead of the curve",
+        "Having fun and new experiences",
+        "Enjoying the little comforts daily",
       ],
       weights: [
-        { thekiasuhero1: +1, thebigbrainboss6: +1 },
-        { theyoloexplorer2: +1, steadylahseeker4: +1 },
-        { lobangking8: +1, theshiokrelaxer3: +1 },
-        { steadylahseeker4: +1, thehuatahsaver7: +1 },
+        { thehuatahsaver7: +1 },
+        { thekiasuhero1: +1 },
+        { theyoloexplorer2: +1 },
+        { theshiokrelaxer3: +1 },
+      ],
+    },
+    // STORY 9 - currentQuestionIndex = 16
+    {
+      question:
+        "",
+      choices: ["Big goals take time — just like compounding savings, every step adds up."],
+      weights: [{}],
+    },
+    // QUESTION 9 (secret bubble after Qn)
+    {
+      question: "When thinking about the next 5 years, what’s your approach?",
+      choices: [
+        "I want to be prepared for every possibility",
+        "I’ll go with the flow and see where life takes me",
+        "As long as I’m comfortable and happy, that’s enough",
+        "I’ll stick to steady goals and keep it simple",
+      ],
+      weights: [
+        { thekiasuhero1: +1 },
+        { theyoloexplorer2: +1 },
+        { theshiokrelaxer3: +1 },
+        { steadylahseeker4: +1 },
+      ],
+    },
+    // STORY 10 - currentQuestionIndex = 18
+    {
+      question:
+        "",
+      choices: ["Good decisions aren't just smart, they're self-aware."],
+      weights: [{}],
+    },
+    // QUESTION 10
+    {
+      question: "How do you usually make life-changing choices?",
+      choices: [
+        "Research, compare, and calculate carefully",
+        "Follow gut feeling or intuition",
+        "Talk it through with trusted people",
+        "Think long-term strategy and impact",
+      ],
+      weights: [
+        { chopchopanalyst5: +1 },
+        { theyoloexplorer2: +1 },
+        { steadylahseeker4: +1 },
+        { thebigbrainboss6: +1 },
+      ],
+    },
+    // STORY 11 - currentQuestionIndex = 20
+    {
+      question:
+        "",
+      choices: ["Your wish often reveals what you value most... time, comfort, or control."],
+      weights: [{}],
+    },
+    // QUESTION 11
+    {
+      question: "If you had one “magic power” for daily life, what would it be?",
+      choices: [
+        "See the future.",
+        "Unlimited $$$ (bye-bye adulting stress)",
+        "Pause/slow time to rest",
+        "Teleport anywhere instantly.",
+      ],
+      weights: [
+        { thebigbrainboss6: +1 },
+        { thehuatahsaver7: +1 },
+        { theshiokrelaxer3: +1 },
+        { chopchopanalyst5: +1 },
+      ],
+    },
+    // STORY 12 - currentQuestionIndex = 22
+    {
+      question:
+        "",
+      choices: ["Future-you is basically your life advisor, reminding you that today’s small moves build tomorrow’s freedom."],
+      weights: [{}],
+    },
+    // QUESTION 12 (tip bubble)
+    {
+      question: "If future-you could send a message back, what would you want to hear?",
+      choices: [
+        "“All that planning paid off — you don’t have to stress because things are falling into place.”",
+        "“You chased curiosity and new experiences — no regrets, lots of stories.”",
+        "“The people you care about stayed close — you built strong relationships.”",
+        "“You’re financially secure — treat yourself guilt-free.”",
+      ],
+      weights: [
+        { thebigbrainboss6: +1 },
+        { theyoloexplorer2: +1 },
+        { lobangking8: +1 },
+        { thehuatahsaver7: +1 },
       ],
     },
   ];
@@ -206,16 +317,18 @@ function startQuiz() {
 
 function displayQuestionImage(questionIndex) {
   const imageURLs = [
-    "./images/1_hawker.png",
-    "./images/2_home.png",
-    "./images/3_curveball.png",
-    "./images/4_shiok.png",
-    "./images/5_payday.png",
-    "./images/6_emergency.png",
-    "./images/7_stress.png",
-    "./images/8_motivation.png",
-    "./images/9_approach.png",
-    "./images/10_choice.png",
+    "./images/s1.png", "./images/1_hawker.png",
+    "./images/s2.png", "./images/2_home.png",
+    "./images/s3.png", "./images/3_curveball.png",
+    "./images/s4.png", "./images/4_shiok.png",
+    "./images/s5.png", "./images/5_payday.png",
+    "./images/s6.png", "./images/6_emergency.png",
+    "./images/s7.png", "./images/7_stress.png",
+    "./images/s8.png", "./images/8_motivation.png",
+    "./images/s9.png", "./images/9_approach.png",
+    "./images/s10.png", "./images/10_choice.png",
+    "./images/s11.png", "./images/11_magic.png",
+    "./images/s12.png", "./images/12_futureme.png",
   ];
   const el = document.getElementById("question-image");
   if (el) el.src = imageURLs[questionIndex] || "";
@@ -276,15 +389,16 @@ function handleChoiceClick(choiceIndex) {
 
 /* ---------- Tips Popup ---------- */
 function addTipsHereIfAny(currentQuestionIndex){
-    if (![5, 7, 9, 10].includes(currentQuestionIndex)){return;}
-    if (currentQuestionIndex === 5){
-        showTip("Quick tip: <br>People who track their spending even casually end up with more freedom for fun stuff!<br><br>* click anywhere to dismiss *");
-    } else if (currentQuestionIndex ===7){
-        showTip("Did you know?<br>70% of people admit they're not ready for big surprises...<br>until it's too late.")
-    } else if (currentQuestionIndex ===9){
-        showTip("Little secret:<br>Most future problems are solved by just being curious enough to ask.")
-    } else if (currentQuestionIndex ===10){
-        showTip("Life satisfaction studies shows:<br>Happiness = 30% planning ahead + 30% relationships + 30% fun... + 10% snacks.")
+    const currentQnNumber = ( (currentQuestionIndex / 2) +1 ) ;
+    if (![6, 8, 10, 13].includes(currentQnNumber)){return;}
+    if (currentQnNumber === 5+1){
+        showTip("Quick question: <br>Every spending pattern tells a story. Is yours helping your future or feeding your now?<br><br>* click anywhere to dismiss *");
+    } else if (currentQnNumber === 7+1){
+        showTip("Did you know?<br>Nearly 50% of Singaporeans lack sufficient emergency savings...<br>Are you one of them?")
+    } else if (currentQnNumber === 9+1){
+        showTip("Little secret:<br>Future-you is built by today's tiny, consistent steps.")
+    } else if (currentQnNumber === 12+1){
+        showTip("Did you know?<br>Happiness is 50% genes, 40% what you do, and 10% life circumstances.<br>So, how are you spending your 40%?")
     } 
 }
 
@@ -400,6 +514,8 @@ function setupContactForm() {
   const messageDiv = document.getElementById("form-message");
   if (!form) return;
 
+  form.addEventListener("DOMContentLoaded", () => {phoneInputChoice(); });
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -489,6 +605,52 @@ console.log("Sending contact data:", {
   });
 }
 
+/* ---- Set up phone tele linkedin feature on contact page ---- */
+function phoneInputChoice(){
+  const selectedIcon = document.getElementById("selected-icon");
+  const iconOptions = document.getElementById("icon-options");
+  const inputField = document.getElementById("user-phone");
+
+  let currentType = "call"; // default
+
+  // Toggle dropdown
+  selectedIcon.addEventListener("click", () => {
+    iconOptions.style.display = iconOptions.style.display === "flex" ? "none" : "flex";
+  });
+
+  // Handle selection
+  iconOptions.addEventListener("click", (e) => {
+    const option = e.target.closest("span"); // ensure we catch <i> clicks too
+    if (option && option.dataset.type) {
+      currentType = option.dataset.type;
+      selectedIcon.innerHTML = option.innerHTML; // preserve icons
+      iconOptions.style.display = "none";
+
+      if (currentType === "telegram") {
+        inputField.type = "text";
+        inputField.placeholder = "What's your Tele @?";
+        inputField.setAttribute("pattern", "^@[A-Za-z0-9_]{3,}$"); 
+        inputField.removeAttribute("maxlength");
+        inputField.oninput = null;
+      } else if (currentType === "linkedin") {
+        inputField.type = "url";
+        inputField.placeholder = "Paste your LinkedIn profile link";
+        inputField.setAttribute("pattern", "^https:\\/\\/(www\\.)?linkedin\\.com\\/in\\/[A-Za-z0-9_-]+\\/?$");
+        inputField.removeAttribute("maxlength");
+        inputField.oninput = null;
+      } else {
+        inputField.type = "tel";
+        inputField.placeholder = "What's your phone number?";
+        inputField.setAttribute("pattern", "[89][0-9]{7}");
+        inputField.setAttribute("maxlength", "8");
+        inputField.oninput = function() {
+          this.value = this.value.replace(/[^0-9]/g, '');
+        };
+      }
+    }
+  });
+}
+
 /* ---------- Wire up page flow ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM ready");
@@ -533,9 +695,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-
-
-
 
 
