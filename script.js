@@ -27,7 +27,7 @@ const questions = [
     // STORY 1 - currentQuestionIndex = 0
     {
       question:
-        "It’s a regular day in Singapore. The sun is blazing, and you’re craving your favourite hawker food.",
+        "",
       choices: ["→"],
       weights: [{}],
     },
@@ -50,7 +50,7 @@ const questions = [
     },
     // STORY 2 - currentQuestionIndex = 2
     {
-      question: "A few days later, everyone’s buzzing — a long weekend is coming up. You start thinking of how to spend it.",
+      question: "",
       choices: ["→"],
       weights: [{}],
     },
@@ -72,8 +72,8 @@ const questions = [
     },
     // STORY 3 - currentQuestionIndex = 4
     {
-      question: "Then, life throws you a little twist. You’ve been planning a big outing, but suddenly a curveball changes your plans. ",
-      choices: ["Do you stick to the plan, or adapt quickly? That’s your money personality too."],
+      question: "",
+      choices: ["Being adaptable isn’t just surviving the chaos, it’s learning to dance with it. Your money habits often move to the same beat."],
       weights: [{}],
     },
     // QUESTION 3
@@ -95,7 +95,7 @@ const questions = [
     // STORY 4 - currentQuestionIndex = 6
     {
       question:
-        "Later that night, you finally get a breather. You look back and think about the little things that make you smile.",
+        "",
       choices: ["“Enjoy the little things in life, for one day you may look back and realize they were the big things.” – Robert Brault"],
       weights: [{}],
     },
@@ -118,7 +118,7 @@ const questions = [
     // STORY 5 - currentQuestionIndex = 8
     {
       question:
-        "Fast forward — it’s payday! The notification comes in, and your account balance looks fresh. ",
+        "",
       choices: ["“A budget is telling your money where to go instead of wondering where it went.” – Dave Ramsey"],
       weights: [{}],
     },
@@ -141,7 +141,7 @@ const questions = [
     // STORY 6 - currentQuestionIndex = 10
     {
       question:
-        "But just as quickly, life reminds you to expect the unexpected. There’s an emergency, and you only have time to grab one thing. ",
+        "",
       choices: ["Emergencies don’t send invites — same with surprise expenses. Are you prepared?"],
       weights: [{}],
     },
@@ -164,8 +164,8 @@ const questions = [
     // STORY 7 - currentQuestionIndex = 12
     {
       question:
-        "Life isn’t always smooth sailing. When stress hits, everyone has their own way of coping.",
-      choices: ["The way you handle stress is often the way you handle money — calm, impulsive, or strategic."],
+        "",
+      choices: ["Stress reveals patterns, not weakness. How you cope matters more than how you crash."],
       weights: [{}],
     },
     // QUESTION 7 (show fact bubble after Qn)
@@ -187,7 +187,7 @@ const questions = [
     // STORY 8 - currentQuestionIndex = 14
     {
       question:
-        "Still, there’s always something that keeps you moving forward — that “why” behind your late nights, early mornings, and tough calls.",
+        "",
       choices: ["Everyone has a “why” — and that “why” is usually what you’re really saving for"],
       weights: [{}],
     },
@@ -210,7 +210,7 @@ const questions = [
     // STORY 9 - currentQuestionIndex = 16
     {
       question:
-        "One evening, you find yourself staring out the window, wondering about the years ahead.",
+        "",
       choices: ["Big goals take time — just like compounding savings, every step adds up."],
       weights: [{}],
     },
@@ -233,8 +233,8 @@ const questions = [
     // STORY 10 - currentQuestionIndex = 18
     {
       question:
-        "Of course, big decisions will come (from career moves to buying your dream home to retirement.)",
-      choices: ["The way you decide today shapes the freedom you'll have tomorrow."],
+        "",
+      choices: ["Good decisions aren't just smart, they're self-aware."],
       weights: [{}],
     },
     // QUESTION 10
@@ -256,8 +256,8 @@ const questions = [
     // STORY 11 - currentQuestionIndex = 20
     {
       question:
-        "If only you had a little extra help, things might be easier. Imagine having a superpower just for daily life.",
-      choices: ["Would your power save time, money... or yourself?"],
+        "",
+      choices: ["Your wish often reveals what you value most... time, comfort, or control."],
       weights: [{}],
     },
     // QUESTION 11
@@ -279,8 +279,8 @@ const questions = [
     // STORY 12 - currentQuestionIndex = 22
     {
       question:
-        "Finally, you think about your future self — wiser, older, and looking back at where you are today.",
-      choices: ["Future-you is basically your life advisor — reminding you that today’s small moves build tomorrow’s freedom."],
+        "",
+      choices: ["Future-you is basically your life advisor, reminding you that today’s small moves build tomorrow’s freedom."],
       weights: [{}],
     },
     // QUESTION 12 (tip bubble)
@@ -317,19 +317,18 @@ function startQuiz() {
 
 function displayQuestionImage(questionIndex) {
   const imageURLs = [
-    "",
-    "./images/1_hawker.png","",
-    "./images/2_home.png","",
-    "./images/3_curveball.png","",
-    "./images/4_shiok.png","",
-    "./images/5_payday.png","",
-    "./images/6_emergency.png","",
-    "./images/7_stress.png","",
-    "./images/8_motivation.png","",
-    "./images/9_approach.png","",
-    "./images/10_choice.png","",
-    "./images/11_magic.png","",
-    "./images/12_futureme.png",
+    "./images/s1.png", "./images/1_hawker.png",
+    "./images/s2.png", "./images/2_home.png",
+    "./images/s3.png", "./images/3_curveball.png",
+    "./images/s4.png", "./images/4_shiok.png",
+    "./images/s5.png", "./images/5_payday.png",
+    "./images/s6.png", "./images/6_emergency.png",
+    "./images/s7.png", "./images/7_stress.png",
+    "./images/s8.png", "./images/8_motivation.png",
+    "./images/s9.png", "./images/9_approach.png",
+    "./images/s10.png", "./images/10_choice.png",
+    "./images/s11.png", "./images/11_magic.png",
+    "./images/s12.png", "./images/12_futureme.png",
   ];
   const el = document.getElementById("question-image");
   if (el) el.src = imageURLs[questionIndex] || "";
@@ -393,11 +392,11 @@ function addTipsHereIfAny(currentQuestionIndex){
     const currentQnNumber = ( (currentQuestionIndex / 2) +1 ) ;
     if (![6, 8, 10, 13].includes(currentQnNumber)){return;}
     if (currentQnNumber === 5+1){
-        showTip("Quick tip: <br>People who track their spending even casually end up with more freedom for fun stuff!<br><br>* click anywhere to dismiss *");
+        showTip("Quick question: <br>Every spending pattern tells a story. Is yours helping your future or feeding your now?<br><br>* click anywhere to dismiss *");
     } else if (currentQnNumber === 7+1){
         showTip("Did you know?<br>Nearly 50% of Singaporeans lack sufficient emergency savings...<br>Are you one of them?")
     } else if (currentQnNumber === 9+1){
-        showTip("Little secret:<br>Most future problems are solved by just being curious enough to ask.")
+        showTip("Little secret:<br>Future-you is built by today's tiny, consistent steps.")
     } else if (currentQnNumber === 12+1){
         showTip("Did you know?<br>Happiness is 50% genes, 40% what you do, and 10% life circumstances.<br>So, how are you spending your 40%?")
     } 
@@ -696,6 +695,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
 
 
