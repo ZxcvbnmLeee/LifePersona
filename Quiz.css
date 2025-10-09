@@ -243,6 +243,11 @@ h4 {
 /* OTHERS */
 /*========*/
 
+#intro {background-image: url("./images/s0.png");
+  /*background-size: cover; 
+  background-position: center;*/
+  background-repeat: no-repeat;}
+
 #quiz, #intro {
   display: flex;
   flex-direction: column;
@@ -532,6 +537,5 @@ body.quiz-background {
     padding: 10px;
   }
 }
-
 
 
